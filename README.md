@@ -18,10 +18,10 @@ Distinguer une chute d’une action normale : éviter les fausses alertes en dif
 Déterminer la durée d’immobilité après une chute : si la personne ne se relève pas dans un délai prédéfini, une alerte est déclenchée.
 
 ## Avantages
-✅ Surveillance non intrusive : pas besoin de porter un dispositif, contrairement aux montres connectées.
-✅ Améliore l’autonomie des seniors : ils peuvent vivre seuls en toute sécurité.
-✅ Réduit les délais d’intervention : en cas de chute, l’alerte permet d’apporter de l’aide immédiatement.
-✅ Diminue les coûts de santé : une prise en charge rapide évite des complications graves.
+Surveillance non intrusive : pas besoin de porter un dispositif, contrairement aux montres connectées.
+Améliore l’autonomie des seniors : ils peuvent vivre seuls en toute sécurité.
+Réduit les délais d’intervention : en cas de chute, l’alerte permet d’apporter de l’aide immédiatement.
+Diminue les coûts de santé : une prise en charge rapide évite des complications graves.
 
 ### Fonctionnalités du Système
 1. Collecte et Prétraitement des Données
