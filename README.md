@@ -1,66 +1,129 @@
-# camputer_vision
-## Système de Détection des Comportements Anormaux chez les Personnes Âgées à l'Aide de la Vision par Ordinateur et de l'IA
-Ce projet vise à développer un système intelligent capable de surveiller les personnes âgées, détecter les comportements anormaux tels que les chutes et envoyer des alertes en temps réel pour assurer leur sécurité et leur bien-être.
+# Système de Surveillance de la Fatigue et des Comportements Anormaux chez les Personnes Âgées
 
-## Concept
-Des caméras capturent des vidéos dans l’espace de vie.
+Une application intelligente en temps réel utilisant la vision par ordinateur et la méthode METEO pour détecter les signes de fatigue et les postures à risque chez les personnes âgées.
 
-Des algorithmes d’apprentissage automatique analysent ces vidéos pour :
+## Introduction
 
-Détecter la présence d’une personne et suivre ses mouvements.
+Ce projet vise à améliorer la sécurité et la qualité de vie des personnes âgées à travers une surveillance non intrusive en temps réel. Le système détecte :
 
-Identifier si la personne est âgée ou non à l’aide d’un modèle de reconnaissance faciale et morphologique.
+- La fatigue via les rapports d’aspect des yeux (EAR) et de la bouche (MAR),
+- Les comportements ou postures anormaux via une analyse METEO basée sur les angles articulaires (MediaPipe).
 
-Reconnaître la posture et l’activité : être debout, assis, allongé, en mouvement ou en train de tomber.
+Il fournit des alertes instantanées en cas de comportements suspects (chutes, somnolence, postures à risque) afin de prévenir les accidents domestiques ou les troubles musculo-squelettiques.
 
-Distinguer une chute d’une action normale : éviter les fausses alertes en différenciant une chute d’un simple mouvement volontaire comme s’asseoir rapidement ou ramasser un objet.
+## Fonctionnalités
 
-Déterminer la durée d’immobilité après une chute : si la personne ne se relève pas dans un délai prédéfini, une alerte est déclenchée.
+### Détection de Fatigue (EAR & MAR)
 
-## Avantages
-Surveillance non intrusive : pas besoin de porter un dispositif, contrairement aux montres connectées.
-Améliore l’autonomie des seniors : ils peuvent vivre seuls en toute sécurité.
-Réduit les délais d’intervention : en cas de chute, l’alerte permet d’apporter de l’aide immédiatement.
-Diminue les coûts de santé : une prise en charge rapide évite des complications graves.
+- Suivi en temps réel des yeux pour détecter la fermeture prolongée (somnolence).
+- Analyse de la bouche pour identifier les bâillements.
+- Classifie l'état comme : `Actif` / `Fatigué (somnolant)`.
 
-### Fonctionnalités du Système
-1. Collecte et Prétraitement des Données
-Collecte de vidéos diversifiées incluant différentes postures et chutes simulées par des volontaires.
+### Analyse Posturale METEO
 
-Reconnaissance des personnes âgées à l’aide de modèles de détection basés sur les traits du visage, la posture, et d’autres caractéristiques physiques.
+- Estimation des angles articulaires avec MediaPipe.
+- Application de la méthode METEO pour l’évaluation du risque ergonomique.
+- Génération d’un score IPO et  IPE pour chaque posture observée.
+- Identification des postures à haut risque.
 
-Segmentation de l’image pour identifier le corps et les membres de la personne suivie.
+### Alertes Intelligentes
 
-## 2. Détection des Chutes et Anomalies
-Suivi des mouvements du corps en utilisant des techniques de vision par ordinateur (pose estimation avec OpenPose, MediaPipe, ou un modèle CNN).
+- Alertes visuelles dans l’interface (streamlit).
+- Alarmes sonores via Pygame.
+- Journalisation des alertes pour analyse historique.
 
-Classification des postures : Debout, Assis, Allongé, Chute.
+### Interface Utilisateur
 
-Analyse du temps d’immobilité après une chute pour éviter les fausses alertes.
+- Application Streamlit intuitive.
+- Choix entre :
+  - Mode Vidéo : analyse de vidéos préenregistrées.
+  - Mode Live : analyse directe depuis webcam.
 
-Filtrage avancé des anomalies pour éviter les erreurs d’interprétation (ex : éviter de considérer une personne allongée volontairement comme une chute).
+## Fichiers Principaux
 
-## 3. Système d’Alerte Intelligent
-Déclenchement automatique d’une alerte si une chute est détectée et que la personne ne se relève pas après un certain délai.
+```
+├── app.py                      # Interface principale Streamlit
+├── fatigue_detection.py       # Détection EAR & MAR
+├── posture_meteo.py           # Analyse METEO
+├── models/
+│   ├── svm_fatigue.pkl
+│   ├── rf_fatigue.pkl
+│   └── mlp_fatigue.pkl
+├── alert.mp3                  # Son pour les alertes
+├── notebooks/
+│   ├── build_models.ipynb
+│   └── test_mediapipe.ipynb
+├── feats/
+│   ├── drowsy.csv
+│   └── non_drowsy.csv
+├── README.md
+└── requirements.txt
+```
 
-## Moyens d’alerte :
+## Dépendances
 
-📞 Appel téléphonique vers un proche ou un service d’urgence.
+- Python 3.8+
+- OpenCV (vision par ordinateur)
+- MediaPipe (repères articulaires)
+- Scikit-learn (modèles ML)
+- TensorFlow (modèles CNN si extension future)
+- Pygame (alertes sonores)
+- Streamlit (interface utilisateur)
+- NumPy, Matplotlib, Pandas
 
-📩 Envoi d’un e-mail ou SMS avec les images et la localisation du lieu de la chute.
+## Lancer l’Application
 
-🚨 Alerte sonore pour avertir les personnes présentes dans l’environnement.
+```bash
+streamlit run app.py
+```
 
-## 4. Réduction des Faux Positifs et Amélioration de la Fiabilité
-Intégration de modèles robustes (CNN, RNN, Transformer) pour éviter les erreurs.
+Assurez-vous :
 
-Entraînement du système avec des données variées pour s’adapter aux différentes morphologies et environnements.
+- Que votre webcam est disponible.
+- De fermer les logiciels qui l’utilisent avant de démarrer.
 
-Vérification contextuelle avant de déclencher une alerte (ex : vérifier si la personne tente de se relever).
+## Détails Techniques
 
-## Technologies Utilisées
-🖥️ Vision par Ordinateur : OpenCV, MediaPipe, OpenPose
-📊 Apprentissage Automatique : TensorFlow, PyTorch
-📡 Cloud & Alertes : Twilio API (Appels/SMS), SMTP (Email), Firebase (Notifications push)
+### Détection de Fatigue
+
+- EAR = Distance verticale des yeux / Distance horizontale.
+- MAR = Distance verticale de la bouche / Distance horizontale.
+
+### Détection par la méthode METEO
+
+- Calcul des angles articulaires à partir des coordonnées MediaPipe.
+- Calcul de l’IPE (Indice de Pénibilité Ergonomique) basé sur les scores de flexion.
+- Identification des postures dangereuses et durée d’exposition.
+- Classification en : Risque Faible, Modéré, Élevé.
+
+## Jeux de Données
+
+### Dataset Fatigue
+
+- Source : Kaggle (Drowsiness Dataset)
+- Catégories : Drowsy vs Non-Drowsy
+- Utilisé pour entraîner SVM, RF, MLP.
+
+### Dataset Postures (METEO)
+
+- Jeux personnalisés capturés ou extraits de vidéos d’activités simulées.
+- Mesure des angles pour : cou, dos, genoux, etc.
+- Label manuel des risques selon les recommandations ergonomiques (RULA, REBA).
+
+## Améliorations Futures
+
+- Détection de chutes par séquence vidéo (LSTM ou pose temporal analysis).
+- Intégration d'un modèle 3D pour plus de précision (OpenPose, BlazePose 3D).
+- Surveillance continue avec historique d’alertes.
+- Application mobile pour notifications aux proches ou soignants.
+- Personnalisation des seuils par profil d’utilisateur.
+
+## Contributions
+
+Ce projet est en développement. Les contributions sont les bienvenues pour :
+
+- Améliorer les modèles de classification.
+- Étendre à d'autres comportements à risque (ex. désorientation, fugue).
+- Améliorer la détection de posture dans des environnements complexes.
 
 
