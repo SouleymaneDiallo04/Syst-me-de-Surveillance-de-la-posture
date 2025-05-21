@@ -1,3 +1,6 @@
+# requirements.txt combiné
+
+# Librairies pour la doc (Sphinx et dépendances)
 alabaster==1.0.0
 babel==2.17.0
 certifi==2025.4.26
@@ -21,3 +24,15 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==2.0.0
 sphinxcontrib-serializinghtml==2.0.0
 urllib3==2.4.0
+
+# Librairies pour ton projet de vision par ordinateur et backend
+Flask==2.2.2
+Flask-SQLAlchemy==2.5.1
+opencv-python==4.7.0.72
+torch==2.0.1
+torchvision==0.15.2
+tensorflow==2.13.0
+twilio==9.6.0
+werkzeug==2.2.2
+python-dotenv==1.0.0
+numpy==1.24.3
