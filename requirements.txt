@@ -1,6 +1,6 @@
 # requirements_docs.txt — Dépendances minimales pour builder la doc Sphinx
 
-Sphinx==8.2.3
+Sphinx==7.2.6
 alabaster==1.0.0
 babel==2.17.0
 docutils==0.21.2
