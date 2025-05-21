@@ -8,7 +8,7 @@ Une application intelligente en temps réel basée sur la **vision par ordinateu
 
 Ce projet propose une surveillance **non intrusive** en temps réel, en combinant plusieurs modèles d’intelligence artificielle pour détecter des situations à risque :
 
-- 🛏 **Somnolence** (fatigue visuelle via EAR & MAR)
+-  **Somnolence** (fatigue visuelle via EAR & MAR)
 -  **Prédiction de chute** (séquences vidéo)
 -  **Détection de chute** (basée sur YOLOv5)
 
