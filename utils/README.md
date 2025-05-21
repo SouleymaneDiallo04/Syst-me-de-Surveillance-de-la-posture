@@ -42,7 +42,7 @@ Le système fournit des **alertes instantanées** (visuelles et sonores) pour pr
 
 ---
 
-## 📦 Organisation du Dépôt
+## Organisation du Dépôt
 
 ```bash
 ├── app.py                      # Interface principale Streamlit
