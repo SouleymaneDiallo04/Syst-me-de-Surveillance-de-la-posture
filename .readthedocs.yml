@@ -11,4 +11,5 @@ sphinx:
 python:
   install:
     - method: pip
-      path: utils/requirements.txt
+      path: requirements.txt
+
