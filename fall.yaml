@@ -1,6 +1,0 @@
-path: "../../data/dataAlgorithme2/fall_dataset"
-train: "../../data/dataAlgorithme2/fall_dataset/images/train"
-val: "../../data/dataAlgorithme2/fall_dataset/images/val"
-
-nc: 3
-names: ['fall', 'not fallen', 'unknown']
