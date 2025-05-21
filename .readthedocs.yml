@@ -5,11 +5,10 @@ build:
   tools:
     python: "3.10"
 
-sphinx:
-  configuration: docs/source/conf.py
-
 python:
   install:
     - method: pip
       path: requirements.txt
 
+sphinx:
+  configuration: docs/source/conf.py
