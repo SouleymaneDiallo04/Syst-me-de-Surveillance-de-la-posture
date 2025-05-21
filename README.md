@@ -16,7 +16,7 @@ Le système fournit des **alertes instantanées** (visuelles et sonores) pour pr
 
 ---
 
-## 🚀 Fonctionnalités
+##  Fonctionnalités
 
 ### 🔹 1. Détection de Somnolence
 - Analyse des yeux (EAR) et de la bouche (MAR)
