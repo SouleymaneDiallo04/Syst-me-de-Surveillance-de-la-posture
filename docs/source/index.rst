@@ -13,23 +13,17 @@ Introduction
 
 **Objectif du Projet**  
 Ce système de surveillance intelligente utilise la **vision par ordinateur** pour assurer la sécurité des personnes  (personnes âgées, patients, etc.) via trois modèles IA complémentaires :  
-
+----
 1. **Détection de chutes** (YOLOv5) : Identifie les chutes en temps réel à partir d'un flux vidéo.  
 2. **Prédiction de chutes** (LSTM + CNN) : Anticipe les risques de chute en analysant les séquences temporelles (*LSTM*) et les motifs spatiaux (*CNN*).  
 3. **Détection de somnolence** (CNN) : Repère les signes de fatigue (yeux fermés, tête penchée).  
-
+---
 **Approche Technique**  
 Avant de plonger dans les détails des modèles, nous commençons par le **prétraitement des données**, étape cruciale pour garantir des prédictions fiables. Nos données (vidéos et images annotées) sont :  
-
+---
 - **Normalisées** : Redimensionnement, ajustement de luminosité.  
 - **Augmentées** : Rotation, flip horizontal pour améliorer la robustesse.  
-- **Structurées** : Séparées en séquences temporelles pour le modèle LSTM.  
-
-**Schéma Global**  
-.. image:: _static/workflow.png  
-   :align: center  
-   :width: 600  
-   :alt: Workflow du système  
+- **Structurées** : Séparées en séquences temporelles pour le modèle LSTM.   
 Objectif : Améliorer la sécurité et la qualité de vie des personnes âgées.
 
 Description du Projet
