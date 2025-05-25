@@ -50,16 +50,29 @@ Ce système de surveillance intelligente utilise la **vision par ordinateur** po
 
 **Approche Technique**  
 Avant de plonger dans les détails des modèles, nous commençons par le **prétraitement des données**, étape cruciale pour garantir des prédictions fiables. Nos données (vidéos et images annotées) sont :  
+---
 
-----
+==================
+Approche Technique
+==================
 
- **Normalisées** : Redimensionnement, ajustement de luminosité.
+**Prétraitement des données** :
 
- **Augmentées** : Rotation, flip horizontal pour améliorer la robustesse. 
- 
- **Structurées** : Séparées en séquences temporelles pour le modèle LSTM.  
+- **Normalisation**  
+  ∙ Redimensionnement des images  
+  ∙ Ajustement de la luminosité et contraste  
+  ∙ Normalisation des valeurs pixel [0-1]
 
-----
+- **Augmentation**  
+  ∙ Rotation aléatoire (±15°)  
+  ∙ Flip horizontal  
+  ∙ Variation de saturation  
+
+- **Structuration**  
+  ∙ Découpage en séquences de 30 frames  
+  ∙ Pas temporel de 5 images  
+  ∙ Format (séquences, hauteur, largeur, canaux)
+----  
 
 Objectif : Améliorer la sécurité et la qualité de vie des personnes âgées.
 
