@@ -53,9 +53,11 @@ Avant de plonger dans les détails des modèles, nous commençons par le **prét
 
 ----
 
-- **Normalisées** : Redimensionnement, ajustement de luminosité.  
-- **Augmentées** : Rotation, flip horizontal pour améliorer la robustesse.  
-- **Structurées** : Séparées en séquences temporelles pour le modèle LSTM.  
+ **Normalisées** : Redimensionnement, ajustement de luminosité.
+
+ **Augmentées** : Rotation, flip horizontal pour améliorer la robustesse. 
+ 
+ **Structurées** : Séparées en séquences temporelles pour le modèle LSTM.  
 
 ----
 
