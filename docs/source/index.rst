@@ -1,105 +1,114 @@
+.. Mon Projet documentation master file
+
+#######################################
 Système de Surveillance Intelligent
-===================================
+#######################################
 
 .. contents::
-   :depth: 2
+   :depth: 3
    :local:
+   :backlinks: top
 
-.. _introduction:
-
-============
+==================
 Introduction
-============
+==================
 
-**Objectif du Projet**  
-Ce système de surveillance intelligente utilise la **vision par ordinateur** pour assurer la sécurité des personnes (personnes âgées, patients, etc.) via trois modèles IA complémentaires :  
+**Objectif Principal**  
+Développer un système de surveillance intelligent pour la sécurité des personnes vulnérables (personnes âgées, patients, etc.) via trois modèles IA complémentaires :
 
-----
+.. _modeles:
 
-1. **Détection de chutes** (YOLOv5) : Identifie les chutes en temps réel à partir d'un flux vidéo.  
-2. **Prédiction de chutes** (LSTM + CNN) : Anticipe les risques de chute en analysant les séquences temporelles (*LSTM*) et les motifs spatiaux (*CNN*).  
-3. **Détection de somnolence** (CNN) : Repère les signes de fatigue (yeux fermés, tête penchée).  
+Trois Modèles Clés
+------------------
+1. **Détection de chutes** (YOLOv5) - Identification immédiate
+2. **Prédiction de chutes** (LSTM+CNN) - Analyse préventive
+3. **Détection de somnolence** (CNN) - Surveillance continue
 
-----
+.. _technique:
 
-**Approche Technique**  
-Avant de plonger dans les détails des modèles, nous commençons par le **prétraitement des données**, étape cruciale pour garantir des prédictions fiables. Nos données (vidéos et images annotées) sont :  
-
-----
-
-- **Normalisées** : Redimensionnement, ajustement de luminosité.  
-- **Augmentées** : Rotation, flip horizontal pour améliorer la robustesse.  
-- **Structurées** : Séparées en séquences temporelles pour le modèle LSTM.  
-
-----
-
-Objectif : Améliorer la sécurité et la qualité de vie des personnes âgées.
+Approche Technique
+------------------
+- **Prétraitement** : Normalisation (redimensionnement, luminosité)
+- **Augmentation** : Rotation, flip horizontal
+- **Structuration** : Séquences temporelles pour LSTM
 
 ----
 
-Description du Projet
----------------------
+.. _description:
 
-Solution de surveillance **non intrusive** combinant :
-
-- Modèles d'IA spécialisés  
-- Détection en temps réel  
-- Alertes immédiates  
-
-----
+Description Détaillée
+=====================
 
 Fonctionnalités Principales
 ---------------------------
-
 .. list-table::
    :widths: 30 70
    :header-rows: 0
 
-   * - 🔹 **Détection de Somnolence**
-     - Analyse des yeux (EAR) et bouche (MAR) - Classification Actif/Somnolent
-   * - 🔹 **Prédiction de Chute**
-     - Analyse vidéo préventive - Modèles séquentiels
-   * - 🔹 **Détection de Chute**
-     - YOLOv5 pour identification immédiate - Alertes visuelles/sonores
-   * - 🔹 **Interface Utilisateur**
-     - Application Streamlit avec modes Vidéo/Live
+   * - 🔹 **Détection**
+     - YOLOv5 custom (``yolov5_fall.pt``)
+   * - 🔹 **Prédiction**
+     - LSTM + CNN (``fall_prediction.h5``)
+   * - 🔹 **Somnolence**
+     - CNN (``drowsiness_model.h5``)
+   * - 🔹 **Interface**
+     - Streamlit avec modes Vidéo/Temps réel
 
-----
+.. _structure:
 
 Structure du Projet
--------------------
-
+------------------
 .. code-block:: bash
 
-   ├── app.py                      # Interface principale Streamlit  
-   ├── main.py                     # Point d'entrée principal  
-   ├── models/                     # Modèles entraînés  
-   │   ├── yolov5_fall.pt          # Détection de chutes (YOLOv5)  
-   │   ├── drowsiness_model.h5     # Détection de somnolence  
-   │   └── fall_prediction.h5      # Prédiction de chute  
-   ├── notebooks/                  # Notebooks pour entraînement et tests  
-   │   ├── train_drowsiness.ipynb  
-   │   ├── train_fall_prediction.ipynb  
-   │   └── test_yolov5.ipynb  
-   ├── utils/                      # Utilitaires  
-   │   └── alert.mp3               # Son d'alerte  
-   ├── README.md                   # Documentation  
-   └── requirements.txt            # Dépendances du projet    
+   .
+   ├── app.py                  # Interface Streamlit
+   ├── models/
+   │   ├── yolov5_fall.pt      # Modèle YOLOv5
+   │   ├── drowsiness.h5       # Modèle CNN
+   │   └── fall_pred.h5        # Modèle LSTM
+   ├── notebooks/              # Notebooks d'entraînement
+   │   ├── train_drowsiness.ipynb
+   │   ├── train_fall_prediction.ipynb
+   │   └── test_yolov5.ipynb
+   └── requirements.txt        # Dépendances Python
 
 ----
 
-Documentation Technique
------------------------
+.. _implementation:
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contenu Détaillé:
-   
-   models
-   architectures
-   application
-   defis
-   data
+Implémentation Technique
+========================
+
+Workflow Complet
+----------------
+1. Acquisition vidéo (caméra/RTSP)
+2. Détection d'objets (YOLOv5)
+3. Analyse comportementale (LSTM)
+4. Génération d'alertes (sonores/visuelles)
+
+.. image:: _static/workflow.png
+   :width: 800
+   :align: center
+   :alt: Diagramme du workflow
+
+----
+
+.. _defis:
+
+Défis Techniques
+================
+
+Principaux Challenges
+---------------------
+- Latence temps réel (< 200ms)
+- Réduction des faux positifs
+- Optimisation GPU/CPU
+
+Solutions Innovantes
+-------------------
+- Quantification des modèles
+- Pipeline parallélisé
+- Seuils d'alertes adaptatifs
 
 .. note::
-   Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet.
+   Documentation mise à jour le |date|. Code source disponible sur `GitHub <https://github.com/votre-repo>`_.
