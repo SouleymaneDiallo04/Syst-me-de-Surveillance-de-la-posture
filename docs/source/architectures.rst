@@ -614,6 +614,70 @@ Voici ci-dessous la trace de la courbe d’accuracy (précision) pour l’entra�
    :alt: Courbe d'accuracy entraînement et validation
    :width: 500px
 
+.. _interpretation_courbe_accuracy:
+
+Interprétation des Courbes d'Accuracy Training/Validation
+=========================================================
+
+.. image:: accuracy_train_val.png
+   :alt: Évolution de l'accuracy durant l'entraînement
+   :align: center
+   :width: 80%
+   :class: with-shadow
+
+**Analyse des Tendances**
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. **Convergence Globale** :
+   - Les deux courbes atteignent un plateau après ~30 epochs
+   - Écart final training/validation : ~0.03 (95% vs 92%)
+
+2. **Phase d'Apprentissage** :
+   - Progression rapide jusqu'à epoch 15
+   - Ralentissement notable entre epochs 15-30
+   - Stabilisation complète après epoch 35
+
+**Métriques Clés**
+~~~~~~~~~~~~~~~~~~
++--------------------------+---------------------+
+| **Paramètre**            | **Valeur**          |
++==========================+=====================+
+| Accuracy maximale train   | 95%                 |
++--------------------------+---------------------+
+| Accuracy maximale val     | 92%                 |
++--------------------------+---------------------+
+| Épochs de stabilisation  | 35                  |
++--------------------------+---------------------+
+| Écart final (gap)        | 3%                  |
++--------------------------+---------------------+
+
+**Diagnostic**
+~~~~~~~~~~~~~~
+.. graphviz::
+   digraph {
+      node [shape=box];
+      A [label="Bon apprentissage"];
+      B [label="Overfitting modéré"];
+      C [label="Stabilité atteinte"];
+      
+      A -> B [label="Écart 3%"];
+      B -> C [label="Après epoch 35"];
+   }
+
+**Recommandations**
+~~~~~~~~~~~~~~~~~~~
+1. **Optimisation** :
+   - Early stopping autour de epoch 30-35
+   - Réduction du learning rate après epoch 20
+
+2. **Amélioration** :
+   - Data augmentation pour réduire l'écart
+   - Regularization (Dropout 0.2-0.3) si écart augmente
+
+|trend| **Conclusion** : Courbes saines montrant un bon équilibre apprentissage/généralisation
+
+.. |trend| image:: ../_static/trend_icon.png
+         :width: 15px
 ----
 
 Courbe de Loss (Entraînement et Validation)
