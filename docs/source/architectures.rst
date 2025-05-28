@@ -559,6 +559,49 @@ Voici ci-dessous les résultats de la matrice de confusion obtenue sur le jeu de
 .. image:: ../_static/imageSomnolance/matrice_confusion.png
    :alt: Matrice de confusion du modèle Elsafty 1
    :width: 500px
+   
+.. _interpretation_matrice_confusion:
+
+Interprétation de la Matrice de Confusion
+=========================================
+
+**Structure de la Matrice**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++---------------------+---------------------+---------------------+
+|                     | **Prédit: Active**  | **Prédit: Fatigue**  |
++=====================+=====================+=====================+
+| **Réel: Active**    | 1379 (Vrais Négatifs)| 244 (Faux Positifs)  |
++---------------------+---------------------+---------------------+
+| **Réel: Fatigue**   | 43 (Faux Négatifs)  | 1647 (Vrais Positifs)|
++---------------------+---------------------+---------------------+
+
+**Analyse des Performances**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. **Précision Globale** :
+   - Exactitude = (Vrais Positifs + Vrais Négatifs) / Total  
+   - = (1379 + 1647) / (1379 + 244 + 43 + 1647) = **91.3%**
+
+2. **Détection de Fatigue** :
+   - Sensibilité (Recall) = Vrais Positifs / (Vrais Positifs + Faux Négatifs)  
+   - = 1647 / (1647 + 43) = **97.4%**
+
+3. **Spécificité** :
+   - Capacité à détecter les états actifs  
+   - = Vrais Négatifs / (Vrais Négatifs + Faux Positifs)  
+   - = 1379 / (1379 + 244) = **85.0%**
+
+**Points Forts**
+~~~~~~~~~~~~~~~~
+- Détection excellente des états de fatigue (97.4% de sensibilité)
+- Nombre limité de faux négatifs (43 cas)
+- Performance équilibrée entre les deux classes
+
+**Limites à Considérer**
+~~~~~~~~~~~~~~~~~~~~~~~~
+- Taux relativement élevé de faux positifs (244 cas)
+- Spécificité modérée (85%) pour les états actifs
+- Possible sur-détection de la fatigue dans certains cas
 
 ----
 
