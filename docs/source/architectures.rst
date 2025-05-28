@@ -177,6 +177,7 @@ Courbe Précision-Confiance (P-Curve)
 Ces résultats exceptionnels placent le modèle parmi les solutions les plus fiables du domaine, avec une précision parfaite atteignable tout en conservant une excellente couverture des événements.r
 
 ----
+
 Courbe Precision-Rappel (PR Curve)
 ----------------------------------
 
