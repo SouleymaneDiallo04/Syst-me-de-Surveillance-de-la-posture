@@ -13,7 +13,8 @@ Système de Surveillance Intelligent
 Introduction
 ============
 
-**Objectif du Projet**  
+**Objectif du Projet**
+
 Ce projet consiste à développer un **système de surveillance intelligent** basé sur la **vision par ordinateur**, visant à assurer la sécurité des personnes vulnérables (telles que les personnes âgées ou les patients) à l’aide de trois modèles d’intelligence artificielle complémentaires.
 
 ----
