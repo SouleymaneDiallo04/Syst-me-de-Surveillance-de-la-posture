@@ -36,7 +36,7 @@ Schéma de l’architecture YOLOv5
    :alt: Architecture YOLOv5
    :align: center
 
-*Cette image illustre l’architecture du modèle YOLOv5.
+Cette image illustre l’architecture du modèle YOLOv5.
 
 ----
 
