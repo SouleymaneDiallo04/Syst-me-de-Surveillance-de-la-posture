@@ -200,6 +200,84 @@ Rôle des Packages
 
 ----
 
+----
+Modèle de Prédiction de Chute
+=============================
+
+Installation des Packages
+-------------------------
+
+Pour assurer le bon fonctionnement du modèle de prédiction de chute, plusieurs packages Python sont indispensables.  
+Il est recommandé d’installer ces packages via la commande suivante :
+
+.. code-block:: bash
+
+   pip install tensorflow scikit-learn matplotlib numpy keras networkx
+
+Import des Packages
+-------------------
+
+Les imports suivants sont utilisés dans le code du modèle de prédiction de chute :
+
+.. code-block:: python
+
+   import cv2
+   import os
+   import numpy as np
+   from sklearn.model_selection import train_test_split
+   from keras.utils import to_categorical
+   from keras.models import Sequential
+   from keras.layers import TimeDistributed, Conv2D, MaxPooling2D, Flatten, LSTM, Dense
+   from keras.layers import Dropout, BatchNormalization, GlobalMaxPooling2D
+   from keras.callbacks import EarlyStopping
+   import matplotlib.pyplot as plt
+   import networkx as nx
+   from tensorflow.keras.models import Sequential
+   from tensorflow.keras.layers import TimeDistributed, Conv2D, MaxPooling2D, LSTM, Dense
+   from tensorflow.keras.layers import Dropout, BatchNormalization, GlobalMaxPooling2D
+   from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
+   from tensorflow.keras.regularizers import l2
+   from tensorflow.keras.optimizers import Adam
+   from sklearn.utils import class_weight
+
+Description des Packages
+------------------------
+
+- **cv2 (OpenCV)** : Traitement d’images et vidéos, extraction et manipulation de frames.  
+- **os** : Gestion des chemins de fichiers et interactions système.  
+- **numpy** : Calculs numériques et manipulation de matrices.  
+- **sklearn.model_selection.train_test_split** : Division des données en ensembles d’entraînement et de test.  
+- **keras.utils.to_categorical** : Conversion des labels en format one-hot encoding.  
+- **keras.models.Sequential** : Construction séquentielle des couches du réseau de neurones.  
+- **keras.layers (TimeDistributed, Conv2D, MaxPooling2D, Flatten, LSTM, Dense, Dropout, BatchNormalization, GlobalMaxPooling2D)** :  
+  - TimeDistributed : Applique une couche à chaque frame d’une séquence vidéo.  
+  - Conv2D, MaxPooling2D : Extraction de caractéristiques spatiales dans les images.  
+  - Flatten : Aplatissement des tenseurs pour passer d’une couche convolutive à une couche dense.  
+  - LSTM : Capture la dynamique temporelle dans les séquences.  
+  - Dense : Couche pleinement connectée.  
+  - Dropout, BatchNormalization : Techniques de régularisation pour améliorer la généralisation.  
+  - GlobalMaxPooling2D : Réduction dimensionnelle en conservant les informations importantes.  
+- **keras.callbacks (EarlyStopping, ModelCheckpoint, ReduceLROnPlateau)** :  
+  - EarlyStopping : Arrêt automatique de l’entraînement si la performance ne s’améliore plus.  
+  - ModelCheckpoint : Sauvegarde automatique du meilleur modèle.  
+  - ReduceLROnPlateau : Réduction du taux d’apprentissage en cas de stagnation.  
+- **tensorflow.keras.regularizers.l2** : Régularisation L2 pour éviter le surapprentissage.  
+- **tensorflow.keras.optimizers.Adam** : Optimiseur adaptatif efficace.  
+- **sklearn.utils.class_weight** : Gestion du déséquilibre des classes en pondérant les exemples.  
+- **matplotlib.pyplot** : Visualisation graphique des courbes d’apprentissage et résultats.  
+- **networkx** : Analyse et visualisation de graphes (utilisé selon contexte).
+
+Installation Globale Recommandée
+--------------------------------
+
+Pour installer rapidement l’ensemble des packages nécessaires au modèle de prédiction de chute, utiliser :
+
+.. code-block:: bash
+
+   pip install tensorflow keras scikit-learn matplotlib numpy opencv-python networkx
+
+----
+
 Documentation Technique
 -----------------------
 
