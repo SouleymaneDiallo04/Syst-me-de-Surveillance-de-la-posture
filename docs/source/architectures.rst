@@ -6,6 +6,7 @@ Cette section détaille l’architecture interne des modèles, les techniques ut
 - Description des couches principales  
 - Paramètres d'entraînement  
 - Performances (précision, rappel, F1-score, etc.)
+----
 
 YOLOv5 et son Architecture
 ==========================
