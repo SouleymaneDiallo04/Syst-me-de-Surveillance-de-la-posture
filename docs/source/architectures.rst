@@ -27,9 +27,9 @@ Dans notre cas, nous utilisons YOLOv5 pour détecter les chutes en temps réel, 
 
 ### Schéma de l’architecture YOLOv5
 
-![Architecture YOLOv5](_static/ImageYolov5Model/architecture.png)
+![Architecture YOLOv5](C:\Users\Alif computer\computer_vision\docs\build\_static\ImageYolov5Model\architecture.png)
 
-*Insérez ici l’image illustrant l’architecture du modèle YOLOv5. Remplacez `_static/ImageYolov5Model/architecture.png` par le chemin relatif ou absolu de votre fichier image.*
+*Insérez ici l’image illustrant l’architecture du modèle YOLOv5. Remplacez `C:\Users\Alif computer\computer_vision\docs\build\_static\ImageYolov5Model\architecture.png` par le chemin relatif ou absolu de votre fichier image.*
 
 ---
 
