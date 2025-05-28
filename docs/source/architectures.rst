@@ -42,9 +42,163 @@ Cette image illustre l’architecture du modèle YOLOv5.
 
 ----
 
-Espace pour insérer vos résultats et descriptions personnalisés
+résultats et descriptions 
 ===============================================================
 
-*Insérez ici vos propres observations, métriques, graphiques et analyses concernant l’architecture et la performance de YOLOv5 dans votre projet.*
+Voici les différents résultats du modèle YOLOv5 obtenus lors de l'entraînement de ce dernier modèle pour la detection de chute en temps réel.
+
+----
+
+Matrice de confusion
+--------------------
+
+.. image:: ../_static/ImageYolov5Model/confusion_matrix.png
+   :alt: Confusion Matrix
+   :align: center
+
+----
+
+Courbe F1
+---------
+
+.. image:: ../_static/ImageYolov5Model/F1_curve.png
+   :alt: F1 Curve
+   :align: center
+
+----
+
+Labels
+------
+
+.. image:: ../_static/ImageYolov5Model/labels.jpg
+   :alt: Labels
+   :align: center
+
+----
+
+Labels Correlogram
+------------------
+
+.. image:: ../_static/ImageYolov5Model/labels_correlogram.jpg
+   :alt: Labels Correlogram
+   :align: center
+
+----
+
+P-Curve
+--------
+
+.. image:: ../_static/ImageYolov5Model/P_curve.png
+   :alt: P Curve
+   :align: center
+
+----
+
+PR-Curve
+---------
+
+.. image:: ../_static/ImageYolov5Model/PR_curve.png
+   :alt: Precision-Recall Curve
+   :align: center
+
+----
+
+R-Curve
+--------
+
+.. image:: ../_static/ImageYolov5Model/R_curve.png
+   :alt: Recall Curve
+   :align: center
+
+----
+
+Résultats globaux
+------------------
+
+.. image:: ../_static/ImageYolov5Model/results.png
+   :alt: Results
+   :align: center
+
+----
+
+Train Batch 0
+-------------
+
+.. image:: ../_static/ImageYolov5Model/train_batch0.jpg
+   :alt: Train Batch 0
+   :align: center
+
+----
+
+Train Batch 1
+-------------
+
+.. image:: ../_static/ImageYolov5Model/train_batch1.jpg
+   :alt: Train Batch 1
+   :align: center
+
+----
+
+Train Batch 2
+-------------
+
+.. image:: ../_static/ImageYolov5Model/train_batch2.jpg
+   :alt: Train Batch 2
+   :align: center
+
+----
+
+Val Batch 0 Labels
+------------------
+
+.. image:: ../_static/ImageYolov5Model/val_batch0_labels.jpg
+   :alt: Val Batch 0 Labels
+   :align: center
+
+----
+
+Val Batch 0 Predictions
+-----------------------
+
+.. image:: ../_static/ImageYolov5Model/val_batch0_pred.jpg
+   :alt: Val Batch 0 Predictions
+   :align: center
+
+----
+
+Val Batch 1 Labels
+------------------
+
+.. image:: ../_static/ImageYolov5Model/val_batch1_labels.jpg
+   :alt: Val Batch 1 Labels
+   :align: center
+
+----
+
+Val Batch 1 Predictions
+-----------------------
+
+.. image:: ../_static/ImageYolov5Model/val_batch1_pred.jpg
+   :alt: Val Batch 1 Predictions
+   :align: center
+
+----
+
+Val Batch 2 Labels
+------------------
+
+.. image:: ../_static/ImageYolov5Model/val_batch2_labels.jpg
+   :alt: Val Batch 2 Labels
+   :align: center
+
+----
+
+Val Batch 2 Predictions
+-----------------------
+
+.. image:: ../_static/ImageYolov5Model/val_batch2_pred.jpg
+   :alt: Val Batch 2 Predictions
+   :align: center
+
 
 
