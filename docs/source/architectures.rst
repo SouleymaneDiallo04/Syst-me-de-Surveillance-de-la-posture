@@ -548,5 +548,41 @@ Illustration de l'Architecture
 
 ---
 
+Résultats du Modèle de Somnolence Mentionné ci-dessus
+=====================================================
+
+Matrice de Confusion
+----------------------
+
+Voici ci-dessous les résultats de la matrice de confusion obtenue sur le jeu de test pour évaluer les performances du modèle Elsafty 1.
+
+.. image:: ../_static/imageSomnolance/matrice_confusion.png
+   :alt: Matrice de confusion du modèle Elsafty 1
+   :width: 500px
+
+----
+
+Courbe d'Accuracy (Entraînement et Validation)
+----------------------------------------------
+
+Voici ci-dessous la trace de la courbe d’accuracy (précision) pour l’entraînement et la validation du modèle au fil des époques.
+
+.. image:: ../_static/imageSomnolance/accuracy_train_val.png
+   :alt: Courbe d'accuracy entraînement et validation
+   :width: 500px
+
+----
+
+Courbe de Loss (Entraînement et Validation)
+-------------------------------------------
+
+Voici ci-dessous la trace de la courbe de loss (perte) pour l’entraînement et la validation du modèle au fil des époques.
+
+.. image:: ../_static/imageSomnolance/loss_train_val.png
+   :alt: Courbe de loss entraînement et validation
+   :width: 500px
+
+----
+
 
 
