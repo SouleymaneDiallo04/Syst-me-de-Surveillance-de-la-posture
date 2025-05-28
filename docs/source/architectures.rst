@@ -620,6 +620,8 @@ Voici ci-dessous la trace de la courbe d’accuracy (précision) pour l’entra�
 
 .. _interpretation_courbe_accuracy:
 
+----
+
 Interprétation des Courbes d'Accuracy Training/Validation
 =========================================================
 
@@ -634,6 +636,8 @@ Interprétation des Courbes d'Accuracy Training/Validation
    - Progression rapide jusqu'à epoch 15
    - Ralentissement notable entre epochs 15-30
    - Stabilisation complète après epoch 35
+   
+----
 
 **Métriques Clés**
 ~~~~~~~~~~~~~~~~~~
@@ -652,6 +656,7 @@ Interprétation des Courbes d'Accuracy Training/Validation
      - 3%
 
  **Conclusion** : Courbes saines montrant un bon équilibre apprentissage/généralisation
+----
 
 Courbe de Loss (Entraînement et Validation)
 -------------------------------------------
