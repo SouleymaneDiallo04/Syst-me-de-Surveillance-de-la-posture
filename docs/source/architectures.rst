@@ -395,11 +395,6 @@ Analyse du Batch d'Entraînement 0
 ~~~~~~~~~~~~~~
 Ce batch présente des caractéristiques techniques solides pour l'entraînement initial, avec une couverture variée des scénarios de chute. La qualité des annotations et la diversité des environnements en font une base de données adaptée aux modèles de détection en temps réel.
 
-|maturity| Ce dataset est classé **Niveau 2** sur notre échelle de maturité (sur 5).
-
-.. |maturity| image:: ../_static/maturity_scale.png
-             :width: 20px
-
 **Perspective d'Analyse**
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 La même méthodologie d'analyse sera appliquée systématiquement aux batches suivants (train_batch1, train_batch2, etc.) pour garantir :
