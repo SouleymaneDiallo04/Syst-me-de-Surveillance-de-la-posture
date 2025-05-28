@@ -151,13 +151,13 @@ PR-Curve
    :align: center
 
 ----
+   
 Courbe Rappel-Confiance (R-Curve)
 ---------------------------------
 
 .. image:: ../_static/ImageYolov5Model/R_curve.png
    :alt: Courbe Rappel en fonction du seuil de confiance
    :align: center
-   :width: 80%
 
 **Performances Clés**
 ~~~~~~~~~~~~~~~~~~~~~
