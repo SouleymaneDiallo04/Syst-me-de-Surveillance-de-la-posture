@@ -36,7 +36,7 @@ Schéma de l’architecture YOLOv5
    :alt: Architecture YOLOv5
    :align: center
 
-*Cette image illustre l’architecture du modèle YOLOv5. Assurez-vous que le fichier `architecture.png` est bien placé dans `docs/_static/ImageYolov5Model/` et qu’il est inclus dans le dépôt pour apparaître correctement sur ReadTheDocs.*
+*Cette image illustre l’architecture du modèle YOLOv5.
 
 ----
 
