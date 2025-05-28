@@ -147,12 +147,14 @@ Structure du Projet
 Défis Techniques
 ==================
 
-**Principaux Challenges** :  
+**Principaux Challenges** : 
+
 - Optimisation des performances temps réel  
 - Réduction des faux positifs  
 - Gestion des ressources matérielles  
 
-**Solutions** :  
+**Solutions** : 
+
 - Quantification des modèles  
 - Pipeline parallélisé  
 - Sélection optimale des seuils  
