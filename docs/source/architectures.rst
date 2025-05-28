@@ -48,7 +48,7 @@ résultats et descriptions
 Voici les différents résultats du modèle YOLOv5 obtenus lors de l'entraînement de ce dernier modèle pour la detection de chute en temps réel.
 
 ----
-
+----
 Matrice de confusion
 --------------------
 
@@ -61,7 +61,7 @@ Performances Globales
 - **Taux de détection global** : 81% de réussite sur la classe critique "fallen"
 - **Robustesse** : Seulement 11% de faux négatifs ("fallen" classé comme "not fallen")
 - **Précision contextuelle** : Bonne distinction entre situations normales et chutes
-
+----
 Analyse Détailée
 ~~~~~~~~~~~~~~~~
 
@@ -80,7 +80,7 @@ Analyse Détailée
    - Excellente spécificité pour un système temps réel
    - Comportement prudent sur la classe "unknown"
    - Détection contextuelle avancée
-
+----
 Perspectives d'Amélioration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -88,7 +88,7 @@ Perspectives d'Amélioration
 - *Enrichissement ciblé* : Ajout de cas limites pour:
   - Chutes partielles/obstruées
   - Arrière-plans dynamiques
-
+----
 Comparaison Sectorielle
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -101,7 +101,7 @@ Comparaison Sectorielle
 +---------------------+-------------+------------+
 | Robustesse contexte | ★★★★☆       | ★★★☆☆      |
 +---------------------+-------------+------------+
-
+----
 Conclusion
 ~~~~~~~~~~
 Ces résultats placent notre solution dans le haut du panier des systèmes de détection temps réel, avec des marges de progression maîtrisables pour atteindre l'excellence opérationnelle.
