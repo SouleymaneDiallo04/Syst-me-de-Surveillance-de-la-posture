@@ -14,7 +14,7 @@ Introduction
 ============
 
 **Objectif du Projet**  
-Ce système de surveillance intelligente utilise la **vision par ordinateur** pour assurer la sécurité des personnes (personnes âgées, patients, etc.) via trois modèles IA complémentaires :  
+Ce projet consiste à développer un **système de surveillance intelligent** basé sur la **vision par ordinateur**, visant à assurer la sécurité des personnes vulnérables (telles que les personnes âgées ou les patients) à l’aide de trois modèles d’intelligence artificielle complémentaires.
 
 ----
 
