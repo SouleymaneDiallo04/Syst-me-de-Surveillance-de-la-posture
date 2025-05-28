@@ -538,13 +538,13 @@ Ce modèle est optimisé pour classer les états de vigilance, détectant effica
 
 ---
 
+
 Illustration de l'Architecture
 ===============================
 
 .. image:: ../_static/imageSomnolance/architecture.png
    :alt: Architecture du modèle Elsafty 1
-   :width: 300px
-   :height: 600px
+   :width: 600px 
 
 ---
 
