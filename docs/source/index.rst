@@ -115,6 +115,87 @@ Configuration des Models
 Instalations des Packages
 -------------------------
 
+Installation des Packages Essentiels
+====================================
+
+**modèle de détection de somnolence**
+-------------------------------------
+Les installations suivantes sont cruciales pour assurer le bon fonctionnement du **modèle de détection de somnolence**. Elles couvrent la récupération des données, le traitement d’image, l’analyse statistique et les modèles machine learning.
+
+Installation Globale
+---------------------
+
+Pour installer tous les packages nécessaires, vous pouvez exécuter :  
+
+.. code-block:: bash
+
+   pip uninstall -y mediapipe
+   pip install mediapipe==0.10.7 opencv-python numpy matplotlib pandas scikit-learn xgboost python-docx python-pptx kagglehub
+
+Téléchargement et Préparation des Données
+-----------------------------------------
+
+Le dataset est téléchargé via kagglehub et copié localement :  
+
+.. code-block:: python
+
+   import kagglehub
+
+   # Télécharger le dataset
+   path = kagglehub.dataset_download("rakibuleceruet/drowsiness-prediction-dataset")
+   print("Path to dataset files:", path)
+
+   import shutil
+
+   source = "/root/.cache/kagglehub/datasets/rakibuleceruet/drowsiness-prediction-dataset/versions/1"
+   destination = "/content/drowsiness_dataset"
+
+   shutil.copytree(source, destination, dirs_exist_ok=True)
+   print("Dataset copié dans :", destination)
+
+Importations Utilisées
+------------------------
+
+Une fois les packages installés, nous les utilisons via les importations suivantes :  
+
+.. code-block:: python
+
+   import mediapipe as mp
+   import cv2
+   import numpy as np
+   import matplotlib.pyplot as plt
+   import os
+   import pandas as pd
+   import shutil
+   import pickle
+   import sklearn
+   from sklearn.model_selection import train_test_split
+   from sklearn.pipeline import make_pipeline
+   from sklearn.preprocessing import StandardScaler
+   from sklearn.svm import SVC
+   from sklearn.ensemble import RandomForestClassifier
+   from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_curve, roc_auc_score, precision_recall_curve, classification_report, confusion_matrix
+   import xgboost as xgb
+   from docx import Document
+   from pptx import Presentation
+   from pptx.util import Inches
+
+Rôle des Packages
+------------------
+
+- **mediapipe** : Détection et suivi des repères faciaux.
+- **opencv (cv2)** : Traitement vidéo et image.
+- **numpy** : Calcul numérique.
+- **matplotlib** : Visualisation de données et courbes.
+- **pandas** : Manipulation et analyse de données tabulaires.
+- **shutil** : Manipulation des fichiers et répertoires.
+- **pickle** : Sérialisation et sauvegarde d’objets Python.
+- **scikit-learn (sklearn)** : Prétraitement, modèles SVM/RandomForest, métriques.
+- **xgboost** : Modèles d’ensemble performants pour la classification.
+- **python-docx** : Lecture et écriture de documents Word.
+- **python-pptx** : Création automatique de présentations PowerPoint.
+- **kagglehub** : Téléchargement des datasets depuis Kaggle.
+
 
 
 ----
