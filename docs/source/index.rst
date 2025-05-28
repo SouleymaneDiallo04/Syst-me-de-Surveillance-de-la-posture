@@ -103,12 +103,14 @@ Structure du Projet
    │   └── alert.mp3               # Son d'alerte  
    ├── README.md                   # Documentation  
    └── requirements.txt            # Dépendances du projet    
-
 ----
+
 Configuration des Models
 =========================
 
 
+
+----
 
 Instalations des Packages
 =========================
