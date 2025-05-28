@@ -3,30 +3,6 @@
 #######################################
 Système de Surveillance Intelligent
 #######################################
-
-.. contents::
-   :depth: 3
-   :local:
-   :backlinks: top
-
-==================
-Introduction
-==================
-
-**Objectif du Projet**  
-Ce système de surveillance intelligente utilise la **vision par ordinateur** pour assurer la sécurité des personnes (personnes âgées, patients, etc.) via trois modèles IA complémentaires :  
-
-1. **Détection de chutes** (YOLOv5) : Identifie les chutes en temps réel à partir d'un flux vidéo.  
-2. **Prédiction de chutes** (LSTM + CNN) : Anticipe les risques de chute en analysant les séquences temporelles (*LSTM*) et les motifs spatiaux (*CNN*).  
-3. **Détection de somnolence** (CNN) : Repère les signes de fatigue (yeux fermés, tête penchée).  
-
-**Approche Technique**  
-- **Normalisées** : Redimensionnement, ajustement de luminosité.  
-- **Augmentées** : Rotation, flip horizontal pour améliorer la robustesse.  
-- **Structurées** : Séparées en séquences temporelles pour le modèle LSTM.  
-Système de Surveillance Intelligent
-===================================
-
 .. contents::
    :depth: 2
    :local:
@@ -141,25 +117,11 @@ Documentation Technique
    application
    defis
    data
+   configuration  des models
+   instalations des packages 
 
 .. note::
-   Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet.
-==================
-Fonctionnalités Principales
-==================
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 0
-
-   * - 🔹 **Détection de Somnolence**
-     - Analyse des yeux (EAR) et bouche (MAR) - Classification Actif/Somnolent
-   * - 🔹 **Prédiction de Chute**
-     - Analyse vidéo préventive - Modèles séquentiels
-   * - 🔹 **Détection de Chute**
-     - YOLOv5 pour identification immédiate - Alertes visuelles/sonores
-   * - 🔹 **Interface Utilisateur**
-     - Application Streamlit avec modes Vidéo/Live
+   Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet au mail suivant hinimdoumorsia@gmail.com/.
 
 ==================
 Structure du Projet
@@ -179,21 +141,6 @@ Structure du Projet
    ├── utils/                      # Utilitaires  
    │   └── alert.mp3               # Son d'alerte  
    └── requirements.txt            # Dépendances du projet
-
-==================
-Documentation Technique
-==================
-
-**Modèles** :  
-- Configuration YOLOv5 (hyperparamètres)  
-- Architecture LSTM (couches, optimiseur)  
-- Métriques CNN (précision, rappel)  
-
-**Workflow** :  
-1. Acquisition vidéo  
-2. Pré-traitement des frames  
-3. Inférence des modèles  
-4. Génération d'alertes  
 
 ==================
 Défis Techniques
