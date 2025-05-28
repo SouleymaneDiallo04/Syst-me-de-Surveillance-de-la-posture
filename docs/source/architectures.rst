@@ -485,5 +485,69 @@ Modèle de Détection de Somnolence et Résultats
 =============================================
 
 ----
+===============================
+Modèle Elsafty 1 : Détection de Somnolence
+===============================
+
+Ce modèle de réseau neuronal convolutionnel (CNN) a été conçu spécifiquement pour **la détection de somnolence** en utilisant le jeu de données suivant :  
+
+- Source : `rakibuleceruet/drowsiness-prediction-dataset`  
+- Téléchargement via Kaggle Hub :  
+  ::
+  
+      import kagglehub
+
+      # Télécharger la dernière version du dataset
+      path = kagglehub.dataset_download("rakibuleceruet/drowsiness-prediction-dataset")
+      
+      print("Path to dataset files:", path)
+
+---
+
+Architecture du Modèle
+===============================
+
+Le modèle est une architecture CNN séquentielle comprenant :  
+
+- **4 blocs convolution + max-pooling + batch normalization** :
+  
+  - 1er bloc : 16 filtres (taille 3x3)
+  - 2ème bloc : 32 filtres (taille 5x5)
+  - 3ème bloc : 64 filtres (taille 10x10)
+  - 4ème bloc : 128 filtres (taille 12x12)
+
+- **Couches fully connected** :
+  
+  - Flatten  
+  - Dense (128 neurones, ReLU)
+  - Dense (64 neurones, ReLU)
+  - Dense (1 neurone, Sigmoïde pour sortie binaire)
+
+- **Régularisation** :
+  
+  - Utilisation de BatchNormalization après chaque convolution
+  - Dropout de 0.25 avant la couche finale pour réduire le surapprentissage
+
+- **Compilation** :
+  
+  - Perte : Binary Crossentropy  
+  - Optimiseur : Adam  
+  - Métrique : Accuracy
+
+Ce modèle est optimisé pour classer les états de vigilance, détectant efficacement les signes de somnolence à partir d’images issues du dataset mentionné.
+
+---
+
+Illustration de l'Architecture
+===============================
+
+.. image:: ../_static/imageSomnolance/architecture.png
+   :alt: Architecture du modèle Elsafty 1
+   :width: 600px
+
+*(Assurez-vous que l’image `architecture.png` est bien placée dans le dossier `docs/_static/ModelElsafty1/` de votre dépôt pour qu’elle s’affiche correctement sur ReadTheDocs.)*
+
+---
+
 
 
