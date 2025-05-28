@@ -132,27 +132,6 @@ Pour installer tous les packages nécessaires, vous pouvez exécuter :
    pip uninstall -y mediapipe
    pip install mediapipe==0.10.7 opencv-python numpy matplotlib pandas scikit-learn xgboost python-docx python-pptx kagglehub
 
-Téléchargement et Préparation des Données
------------------------------------------
-
-Le dataset est téléchargé via kagglehub et copié localement :  
-
-.. code-block:: python
-
-   import kagglehub
-
-   # Télécharger le dataset
-   path = kagglehub.dataset_download("rakibuleceruet/drowsiness-prediction-dataset")
-   print("Path to dataset files:", path)
-
-   import shutil
-
-   source = "/root/.cache/kagglehub/datasets/rakibuleceruet/drowsiness-prediction-dataset/versions/1"
-   destination = "/content/drowsiness_dataset"
-
-   shutil.copytree(source, destination, dirs_exist_ok=True)
-   print("Dataset copié dans :", destination)
-
 Importations Utilisées
 ------------------------
 
@@ -204,7 +183,7 @@ Rôle des Packages
 
 
 **Modèle de Prédiction de Chute**
-=============================
+---------------------------------
 
 Installation des Packages
 -------------------------
