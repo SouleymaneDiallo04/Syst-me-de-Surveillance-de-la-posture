@@ -105,6 +105,17 @@ Structure du Projet
    └── requirements.txt            # Dépendances du projet    
 
 ----
+Configuration des Models
+=========================
+
+
+
+Instalations des Packages
+=========================
+
+
+
+----
 
 Documentation Technique
 -----------------------
@@ -117,9 +128,7 @@ Documentation Technique
    architectures
    application
    defis
-   data
-   configuration  des models
-   instalations des packages 
+   data 
 
 .. note::
    Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet au mail suivant hinimdoumorsia@gmail.com/.
