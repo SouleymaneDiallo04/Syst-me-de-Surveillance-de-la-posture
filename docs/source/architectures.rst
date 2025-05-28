@@ -661,6 +661,66 @@ Voici ci-dessous la trace de la courbe de loss (perte) pour l’entraînement et
 .. image:: ../_static/imageSomnolance/loss_train_val.png
    :alt: Courbe de loss entraînement et validation
    :width: 500px
+   
+   .. _interpretation_courbe_loss:
+
+Interprétation des Courbes de Loss Training/Validation
+=====================================================
+
+**Analyse des Courbes**
+~~~~~~~~~~~~~~~~~~~~~~~
+
+1. **Décroissance Initiale** :
+   - Diminution rapide de la loss jusqu'à epoch 15
+   - Phase d'apprentissage principale visible
+
+2. **Convergence** :
+   - Stabilisation progressive après epoch 25
+   - Écart final training/validation : ~0.05
+
+3. **Comportement Asymptotique** :
+   - La loss de validation suit étroitement la loss d'entraînement
+   - Pas de divergence visible
+
+.. list-table:: Métriques Clés des Courbes de Loss
+   :header-rows: 1
+
+   * - Paramètre
+     - Valeur
+   * - Loss finale (train)
+     - 0.20
+   * - Loss finale (validation)
+     - 0.25
+   * - Épochs de stabilisation
+     - 25
+   * - Écart final (gap)
+     - 0.05
+
+
+.. list-table:: Diagnostic des Courbes
+   :header-rows: 1
+
+   * - Observation
+     - Interprétation
+   * - Courbes parallèles
+     - Bonne généralisation du modèle
+   * - Écart constant
+     - Régularisation appropriée
+   * - Stabilisation précoce
+     - Taux d'apprentissage optimal
+
+
+**Recommandations**
+~~~~~~~~~~~~~~~~~~~
+1. **Optimisation** :
+   - Early stopping possible dès epoch 25
+   - Réduction du learning rate après epoch 15
+
+2. **Amélioration** :
+   - Essayer des fonctions de loss alternatives
+   - Affiner les hyperparamètres de régularisation
+
+|performance| **Évaluation Globale** : Courbes montrant un apprentissage bien contrôlé avec une bonne généralisation
 
 ----
 
