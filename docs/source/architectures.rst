@@ -66,11 +66,13 @@ Analyse Détailée
 ~~~~~~~~~~~~~~~~
 
 1. **Détection des Chutes (81% de succès)**
+
    - Confusions résiduelles principalement avec:
      - "not fallen" (11% - mouvements similaires)
      - "background" (7% - cas extrêmes)
 
 2. **Gestion des Faux Positifs**
+
    - Seulement 27% de confusion "background→fallen" (sur scènes complexes)
    - Taux "not fallen→fallen" limité à 11% (meilleure que la moyenne du domaine)
 
@@ -81,6 +83,7 @@ Analyse Détailée
 
 Perspectives d'Amélioration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 - *Optimisation simple* : Ajustement des seuils pourrait réduire les faux positifs de ~30%
 - *Enrichissement ciblé* : Ajout de cas limites pour:
   - Chutes partielles/obstruées
