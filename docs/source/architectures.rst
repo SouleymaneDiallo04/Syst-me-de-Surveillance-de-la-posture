@@ -651,8 +651,7 @@ Interprétation des Courbes d'Accuracy Training/Validation
    * - Écart final (gap)
      - 3%
 
-
-|trend| **Conclusion** : Courbes saines montrant un bon équilibre apprentissage/généralisation
+ **Conclusion** : Courbes saines montrant un bon équilibre apprentissage/généralisation
 
 Courbe de Loss (Entraînement et Validation)
 -------------------------------------------
