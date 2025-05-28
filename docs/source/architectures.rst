@@ -668,6 +668,8 @@ Voici ci-dessous la trace de la courbe de loss (perte) pour l’entraînement et
    :width: 500px
    
    .. _interpretation_courbe_loss:
+   
+----
 
 Interprétation des Courbes de Loss Training/Validation
 =====================================================
@@ -682,6 +684,8 @@ Interprétation des Courbes de Loss Training/Validation
 2. **Convergence** :
    - Stabilisation progressive après epoch 25
    - Écart final training/validation : ~0.05
+   
+----
 
 3. **Comportement Asymptotique** :
    - La loss de validation suit étroitement la loss d'entraînement
@@ -700,7 +704,7 @@ Interprétation des Courbes de Loss Training/Validation
          - 25
        * - Écart final (gap)
          - 0.05
-
+----
 
 .. list-table:: Diagnostic des Courbes
    :header-rows: 1
@@ -714,6 +718,8 @@ Interprétation des Courbes de Loss Training/Validation
    * - Stabilisation précoce
      - Taux d'apprentissage optimal
 
+
+----
 
 **Recommandations**
 ~~~~~~~~~~~~~~~~~~~
