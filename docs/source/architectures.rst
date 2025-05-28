@@ -721,17 +721,10 @@ Interprétation des Courbes de Loss Training/Validation
 
 ----
 
-**Recommandations**
-~~~~~~~~~~~~~~~~~~~
-1. **Optimisation** :
-   - Early stopping possible dès epoch 25
-   - Réduction du learning rate après epoch 15
+Modèle de Prédiction de Chute et ses Résultats
+==============================================
 
-2. **Amélioration** :
-   - Essayer des fonctions de loss alternatives
-   - Affiner les hyperparamètres de régularisation
-
-**Évaluation Globale** : Courbes montrant un apprentissage bien contrôlé avec une bonne généralisation
+Dans cette section, nous présentons les résultats obtenus avec le modèle de prédiction de chute, incluant les métriques clés, la matrice de confusion et les courbes d'entraînement/validation.
 
 ----
 
