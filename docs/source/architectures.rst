@@ -565,15 +565,19 @@ Voici ci-dessous les résultats de la matrice de confusion obtenue sur le jeu de
 Interprétation de la Matrice de Confusion
 =========================================
 
-**Structure de la Matrice**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+---------------------+---------------------+---------------------+
-|                     | **Prédit: Active**  | **Prédit: Fatigue**  |
-+=====================+=====================+=====================+
-| **Réel: Active**    | 1379 (Vrais Négatifs)| 244 (Faux Positifs)  |
-+---------------------+---------------------+---------------------+
-| **Réel: Fatigue**   | 43 (Faux Négatifs)  | 1647 (Vrais Positifs)|
-+---------------------+---------------------+---------------------+
+.. list-table:: Structure de la Matrice de Confusion
+   :header-rows: 1
+
+   * - 
+     - Prédit: Active
+     - Prédit: Fatigue
+   * - Réel: Active
+     - 1379 (Vrais Négatifs)
+     - 244 (Faux Positifs)
+   * - Réel: Fatigue
+     - 43 (Faux Négatifs)
+     - 1647 (Vrais Positifs)
+
 
 **Analyse des Performances**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -633,17 +637,20 @@ Interprétation des Courbes d'Accuracy Training/Validation
 
 **Métriques Clés**
 ~~~~~~~~~~~~~~~~~~
-+--------------------------+---------------------+
-| **Paramètre**            | **Valeur**          |
-+==========================+=====================+
-| Accuracy maximale train   | 95%                 |
-+--------------------------+---------------------+
-| Accuracy maximale val     | 92%                 |
-+--------------------------+---------------------+
-| Épochs de stabilisation  | 35                  |
-+--------------------------+---------------------+
-| Écart final (gap)        | 3%                  |
-+--------------------------+---------------------+
+.. list-table:: Métriques Clés des Courbes d'Accuracy
+   :header-rows: 1
+
+   * - Paramètre
+     - Valeur
+   * - Accuracy maximale (train)
+     - 95%
+   * - Accuracy maximale (validation)
+     - 92%
+   * - Épochs de stabilisation
+     - 35
+   * - Écart final (gap)
+     - 3%
+
 
 |trend| **Conclusion** : Courbes saines montrant un bon équilibre apprentissage/généralisation
 
