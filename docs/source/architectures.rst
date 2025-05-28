@@ -543,9 +543,8 @@ Illustration de l'Architecture
 
 .. image:: ../_static/imageSomnolance/architecture.png
    :alt: Architecture du modèle Elsafty 1
-   :width: 600px
-
-*(Assurez-vous que l’image `architecture.png` est bien placée dans le dossier `docs/_static/ModelElsafty1/` de votre dépôt pour qu’elle s’affiche correctement sur ReadTheDocs.)*
+   :width: 300px
+   :height: 600px
 
 ---
 
