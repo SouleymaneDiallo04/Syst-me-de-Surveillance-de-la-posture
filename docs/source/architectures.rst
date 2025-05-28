@@ -720,7 +720,7 @@ Interprétation des Courbes de Loss Training/Validation
    - Essayer des fonctions de loss alternatives
    - Affiner les hyperparamètres de régularisation
 
-|performance| **Évaluation Globale** : Courbes montrant un apprentissage bien contrôlé avec une bonne généralisation
+**Évaluation Globale** : Courbes montrant un apprentissage bien contrôlé avec une bonne généralisation
 
 ----
 
