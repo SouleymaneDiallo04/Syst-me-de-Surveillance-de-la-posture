@@ -1,4 +1,3 @@
-----
 
 Architectures et Résultats des Modèles
 ======================================
