@@ -682,19 +682,19 @@ Interprétation des Courbes de Loss Training/Validation
    - La loss de validation suit étroitement la loss d'entraînement
    - Pas de divergence visible
 
-.. list-table:: Métriques Clés des Courbes de Loss
-   :header-rows: 1
+    .. list-table:: Métriques Clés des Courbes de Loss
+       :header-rows: 1
 
-   * - Paramètre
-     - Valeur
-   * - Loss finale (train)
-     - 0.20
-   * - Loss finale (validation)
-     - 0.25
-   * - Épochs de stabilisation
-     - 25
-   * - Écart final (gap)
-     - 0.05
+       * - Paramètre
+         - Valeur
+       * - Loss finale (train)
+         - 0.20
+       * - Loss finale (validation)
+         - 0.25
+       * - Épochs de stabilisation
+         - 25
+       * - Écart final (gap)
+         - 0.05
 
 
 .. list-table:: Diagnostic des Courbes
