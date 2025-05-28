@@ -11,7 +11,9 @@ YOLOv5 et son Architecture
 ==========================
 
 YOLOv5 est une famille de modèles de détection d’objets en temps réel basée sur une architecture de réseau neuronal convolutif optimisée.  
+
 L’architecture de YOLOv5 comprend principalement :  
+
 - **Backbone CSP (Cross Stage Partial)** :  
   Permet une extraction efficace des caractéristiques tout en réduisant le coût computationnel et en améliorant la capacité de généralisation.  
 - **Neck PANet (Path Aggregation Network)** :  
