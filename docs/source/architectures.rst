@@ -24,7 +24,7 @@ L’architecture de YOLOv5 comprend principalement :
 
 Dans notre cas, nous utilisons YOLOv5 pour détecter les chutes en temps réel, ce qui nécessite une détection rapide et précise afin d’assurer une surveillance efficace.
 
----
+----
 
 ### Schéma de l’architecture YOLOv5
 
@@ -32,7 +32,7 @@ Dans notre cas, nous utilisons YOLOv5 pour détecter les chutes en temps réel, 
 
 *Insérez ici l’image illustrant l’architecture du modèle YOLOv5. Remplacez `C:\Users\Alif computer\computer_vision\docs\build\_static\ImageYolov5Model\architecture.png` par le chemin relatif ou absolu de votre fichier image.*
 
----
+----
 
 ### Espace pour insérer vos résultats et descriptions personnalisés
 
