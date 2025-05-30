@@ -10,16 +10,19 @@ Bienvenue à la documentation du projet
    :align: center
    :width: 100%
    
-----
 
 Système de Surveillance Intelligent
 ----------------------------------------
 
-**Réalisé par** :  
+----
+
+***Réalisé par***: 
 HINIMDOU MORSIA GUITDAM et SOULEYMANE DIALLO
 
-**Encadrant** :  
+***Encadrant**:  
 Professeur Tawfik Masrour
+
+----
 
 .. toctree::
    :maxdepth: 2
