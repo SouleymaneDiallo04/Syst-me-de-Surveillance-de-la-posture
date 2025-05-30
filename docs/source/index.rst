@@ -1,18 +1,17 @@
 .. Mon Projet documentation master file
+
 Bienvenue à la documentation du projet
-=====================================
+======================================
 
 Système de Surveillance Intelligent
 -----------------------------------
 
-
 .. contents::
-   :depth: 2
+   :depth: 3
    :local:
 
 .. _introduction:
 
-============
 Introduction
 ============
 
@@ -28,15 +27,13 @@ Ce projet consiste à développer un **système de surveillance intelligent** ba
 
 ----
 
-**Approche Technique**  
-Avant de plonger dans les détails des modèles, nous commençons par le **prétraitement des données**, étape cruciale pour garantir des prédictions fiables. Nos données (vidéos et images annotées) sont :  
----
-
-==================
 Approche Technique
 ==================
 
-**Prétraitement des données** :
+Avant de plonger dans les détails des modèles, nous commençons par le **prétraitement des données**, étape cruciale pour garantir des prédictions fiables. Nos données (vidéos et images annotées) sont :
+
+Prétraitement des données
+-------------------------
 
 - **Normalisation**  
   ∙ Redimensionnement des images  
@@ -52,14 +49,15 @@ Approche Technique
   ∙ Découpage en séquences de 30 frames  
   ∙ Pas temporel de 5 images  
   ∙ Format (séquences, hauteur, largeur, canaux)
-----  
+
+----
 
 Objectif : Améliorer la sécurité et la qualité de vie des personnes âgées.
 
 ----
 
 Description du Projet
----------------------
+=====================
 
 Solution de surveillance **non intrusive** combinant :
 
@@ -70,7 +68,7 @@ Solution de surveillance **non intrusive** combinant :
 ----
 
 Fonctionnalités Principales
----------------------------
+===========================
 
 .. list-table::
    :widths: 30 70
@@ -88,7 +86,7 @@ Fonctionnalités Principales
 ----
 
 Structure du Projet
--------------------
+==================
 
 .. code-block:: bash
 
@@ -106,27 +104,35 @@ Structure du Projet
    │   └── alert.mp3               # Son d'alerte  
    ├── README.md                   # Documentation  
    └── requirements.txt            # Dépendances du projet    
-----
-
-Configuration des Models
-------------------------
-
-
 
 ----
 
-Instalations des Packages
--------------------------
+Configuration des Modèles
+=========================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Configuration détaillée des modèles
+
+   configurations/detection_somnolence
+   configurations/prediction_chute
+   configurations/detection_chute
+
+----
+
+Installation des Packages
+=========================
 
 Installation des Packages Essentiels
-====================================
+------------------------------------
 
-**modèle de détection de somnolence**
--------------------------------------
+**Modèle de détection de somnolence**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Les installations suivantes sont cruciales pour assurer le bon fonctionnement du **modèle de détection de somnolence**. Elles couvrent la récupération des données, le traitement d’image, l’analyse statistique et les modèles machine learning.
 
 Installation Globale
----------------------
+-------------------
 
 Pour installer tous les packages nécessaires, vous pouvez exécuter :  
 
@@ -136,7 +142,7 @@ Pour installer tous les packages nécessaires, vous pouvez exécuter :
    pip install mediapipe==0.10.7 opencv-python numpy matplotlib pandas scikit-learn xgboost python-docx python-pptx kagglehub
 
 Importations Utilisées
-------------------------
+---------------------
 
 Une fois les packages installés, nous les utilisons via les importations suivantes :  
 
@@ -163,30 +169,25 @@ Une fois les packages installés, nous les utilisons via les importations suivan
    from pptx.util import Inches
 
 Rôle des Packages
-------------------
+----------------
 
-- **mediapipe** : Détection et suivi des repères faciaux.
-- **opencv (cv2)** : Traitement vidéo et image.
-- **numpy** : Calcul numérique.
-- **matplotlib** : Visualisation de données et courbes.
-- **pandas** : Manipulation et analyse de données tabulaires.
-- **shutil** : Manipulation des fichiers et répertoires.
-- **pickle** : Sérialisation et sauvegarde d’objets Python.
-- **scikit-learn (sklearn)** : Prétraitement, modèles SVM/RandomForest, métriques.
-- **xgboost** : Modèles d’ensemble performants pour la classification.
-- **python-docx** : Lecture et écriture de documents Word.
-- **python-pptx** : Création automatique de présentations PowerPoint.
+- **mediapipe** : Détection et suivi des repères faciaux.  
+- **opencv (cv2)** : Traitement vidéo et image.  
+- **numpy** : Calcul numérique.  
+- **matplotlib** : Visualisation de données et courbes.  
+- **pandas** : Manipulation et analyse de données tabulaires.  
+- **shutil** : Manipulation des fichiers et répertoires.  
+- **pickle** : Sérialisation et sauvegarde d’objets Python.  
+- **scikit-learn (sklearn)** : Prétraitement, modèles SVM/RandomForest, métriques.  
+- **xgboost** : Modèles d’ensemble performants pour la classification.  
+- **python-docx** : Lecture et écriture de documents Word.  
+- **python-pptx** : Création automatique de présentations PowerPoint.  
 - **kagglehub** : Téléchargement des datasets depuis Kaggle.
 
-
-
 ----
 
-----
-
-
-**Modèle de Prédiction de Chute**
----------------------------------
+Modèle de Prédiction de Chute
+==============================
 
 Installation des Packages
 -------------------------
@@ -199,7 +200,7 @@ Il est recommandé d’installer ces packages via la commande suivante :
    pip install tensorflow scikit-learn matplotlib numpy keras networkx
 
 Import des Packages
--------------------
+------------------
 
 Les imports suivants sont utilisés dans le code du modèle de prédiction de chute :
 
@@ -225,7 +226,7 @@ Les imports suivants sont utilisés dans le code du modèle de prédiction de ch
    from sklearn.utils import class_weight
 
 Description des Packages
-------------------------
+-----------------------
 
 - **cv2 (OpenCV)** : Traitement d’images et vidéos, extraction et manipulation de frames.  
 - **os** : Gestion des chemins de fichiers et interactions système.  
@@ -241,77 +242,64 @@ Description des Packages
   - Dense : Couche pleinement connectée.  
   - Dropout, BatchNormalization : Techniques de régularisation pour améliorer la généralisation.  
   - GlobalMaxPooling2D : Réduction dimensionnelle en conservant les informations importantes.  
-- **keras.callbacks (EarlyStopping, ModelCheckpoint, ReduceLROnPlateau)** :  
-  - EarlyStopping : Arrêt automatique de l’entraînement si la performance ne s’améliore plus.  
-  - ModelCheckpoint : Sauvegarde automatique du meilleur modèle.  
-  - ReduceLROnPlateau : Réduction du taux d’apprentissage en cas de stagnation.  
-- **tensorflow.keras.regularizers.l2** : Régularisation L2 pour éviter le surapprentissage.  
-- **tensorflow.keras.optimizers.Adam** : Optimiseur adaptatif efficace.  
-- **sklearn.utils.class_weight** : Gestion du déséquilibre des classes en pondérant les exemples.  
-- **matplotlib.pyplot** : Visualisation graphique des courbes d’apprentissage et résultats.  
-- **networkx** : Analyse et visualisation de graphes (utilisé selon contexte).
-
-Installation Globale Recommandée
---------------------------------
-
-Pour installer rapidement l’ensemble des packages nécessaires au modèle de prédiction de chute, utiliser :
-
-.. code-block:: bash
-
-   pip install tensorflow keras scikit-learn matplotlib numpy opencv-python networkx
+- **keras.callbacks (EarlyStopping, ModelCheckpoint, ReduceLROnPlateau)** : Gestion dynamique de l’entraînement.  
+- **tensorflow.keras.optimizers.Adam** : Optimiseur performant pour l’entraînement.  
+- **sklearn.utils.class_weight** : Gestion des classes déséquilibrées.  
+- **matplotlib.pyplot** : Visualisation des résultats et courbes d’apprentissage.  
+- **networkx** : Analyse graphique et manipulation des graphes, utile pour la visualisation des relations entre frames ou mouvements.
 
 ----
 
-Documentation Technique
------------------------
+Modèle de Détection de Chute (YOLOv5)
+=====================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contenu Détaillé:
-   
-   models
-   architectures
-   application
-   defis
-   data 
+Installation et Importations
+----------------------------
 
-.. note::
-   Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet au mail suivant hinimdoumorsia@gmail.com/.
-
-==================
-Structure du Projet
-==================
+Le modèle YOLOv5 nécessite une installation spécifique et des imports particuliers :
 
 .. code-block:: bash
 
-   ├── app.py                      # Interface principale Streamlit  
-   ├── models/                     # Modèles entraînés  
-   │   ├── yolov5_fall.pt          # Détection de chutes (YOLOv5)  
-   │   ├── drowsiness_model.h5     # Détection de somnolence  
-   │   └── fall_prediction.h5      # Prédiction de chute  
-   ├── notebooks/                  # Notebooks pour entraînement et tests  
-   │   ├── train_drowsiness.ipynb  
-   │   ├── train_fall_prediction.ipynb  
-   │   └── test_yolov5.ipynb  
-   ├── utils/                      # Utilitaires  
-   │   └── alert.mp3               # Son d'alerte  
-   └── requirements.txt            # Dépendances du projet
+   pip install torch torchvision torchaudio
+   pip install matplotlib numpy opencv-python
 
-==================
-Défis Techniques
-==================
+Imports essentiels dans le script :
 
-**Principaux Challenges** : 
+.. code-block:: python
 
-- Optimisation des performances temps réel  
-- Réduction des faux positifs  
-- Gestion des ressources matérielles  
+   import torch
+   import cv2
+   import numpy as np
+   import matplotlib.pyplot as plt
 
-**Solutions** : 
+----
 
-- Quantification des modèles  
-- Pipeline parallélisé  
-- Sélection optimale des seuils  
+Résumé des packages
+===================
 
-.. note::
-   Documentation mise à jour le |date|. Code source disponible sur `GitHub <https://github.com/votre-repo>`_.
+| Fonctionnalité                    | Packages essentiels                               |
+|---------------------------------|--------------------------------------------------|
+| Vision par ordinateur            | opencv-python, mediapipe, matplotlib             |
+| Modèles d’apprentissage profond | tensorflow, keras, torch, torchvision             |
+| Prétraitement et analyse         | numpy, pandas, scikit-learn, xgboost               |
+| Traitement vidéo et images       | cv2, mediapipe                                    |
+| Gestion fichiers et données      | os, shutil, pickle                                |
+| Rapports et documentation        | python-docx, python-pptx                           |
+
+----
+
+Notes additionnelles
+====================
+
+- Veuillez vérifier les versions des packages pour éviter les conflits.  
+- Utilisez un environnement virtuel dédié (venv ou conda).  
+- En cas de problèmes liés à mediapipe, tentez une désinstallation/réinstallation avec la version recommandée (0.10.7).  
+- Les notebooks présents dans le dossier `notebooks/` contiennent des exemples d’utilisation, entraînement et tests des modèles.
+
+----
+
+Fin de la documentation
+========================
+
+Pour toute question ou contribution, merci de consulter le fichier README.md ou contacter l’équipe projet.
+
