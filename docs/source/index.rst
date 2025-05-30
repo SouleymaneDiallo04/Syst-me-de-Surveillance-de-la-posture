@@ -46,7 +46,7 @@ Bienvenue à la documentation du projet
    installations
    documentation
    defis
-   
+
    ----
 
 .. note::

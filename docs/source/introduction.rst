@@ -1,5 +1,5 @@
-Introduction
-============
+I. Introduction
+===============
 
 Objectif du Projet
 ------------------
