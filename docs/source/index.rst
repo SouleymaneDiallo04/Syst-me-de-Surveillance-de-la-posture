@@ -77,8 +77,9 @@ Objectif : Améliorer la sécurité et la qualité de vie des personnes âgées.
 
 ----
 
+==================
 Description du Projet
----------------------
+==================
 
 Solution de surveillance **non intrusive** combinant :
 
@@ -88,8 +89,10 @@ Solution de surveillance **non intrusive** combinant :
 
 ----
 
+==================
 Fonctionnalités Principales
----------------------------
+==================
+
 
 .. list-table::
    :widths: 30 70
@@ -106,8 +109,9 @@ Fonctionnalités Principales
 
 ----
 
+==================
 Structure du Projet
--------------------
+==================
 
 .. code-block:: bash
 
