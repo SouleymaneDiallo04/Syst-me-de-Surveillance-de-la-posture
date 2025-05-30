@@ -19,11 +19,8 @@ Bienvenue à la documentation du projet
 **réalisé par**:
 =============
 
-HINIMDOU MORSIA GUITDAM
-=========================
-
-SOULEYMANE DIALLO
-=================
+HINIMDOU MORSIA GUITDAM  &  SOULEYMANE DIALLO
+=============================================
 
 **encadrant**:
 =============
