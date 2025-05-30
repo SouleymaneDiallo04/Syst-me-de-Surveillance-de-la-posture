@@ -22,7 +22,7 @@ Bienvenue à la documentation du projet
 *hinimdou morsia guitdam* & *souleymane diallo*
 ==============================================
 
-*encadrant* :
+**encadrant**:
 =============
 
 *professeur tawfik masrour*
