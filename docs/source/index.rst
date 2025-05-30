@@ -19,9 +19,11 @@ Système de Surveillance Intelligent
 *réalisé par*
 =============
 
-**HINIMDOU MORSIA GUITDAM** 
+*HINIMDOU MORSIA GUITDAM*
+===========================
 
-**SOULEYMANE DIALLO**
+*SOULEYMANE DIALLO*
+=====================
 
 *encadrant*
 ===========
