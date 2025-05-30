@@ -12,7 +12,7 @@ Pour notre projet, nous avons adapté le traitement des données selon le modèl
 Dans cette section, nous détaillons l’approche spécifique pour le modèle de détection de somnolence.
 
 Chargement des données
- ----------------------
+----------------------
 
 Nous téléchargeons le dataset directement depuis Kaggle à l’aide de ``kagglehub`` :
 
@@ -27,7 +27,7 @@ Nous téléchargeons le dataset directement depuis Kaggle à l’aide de ``kaggl
     
     
 Utilisation de Mediapipe pour les landmarks faciaux
- ---------------------------------------------------
+---------------------------------------------------
 
 Nous utilisons ``mediapipe`` pour extraire les points de repère (landmarks) du visage :  
 
@@ -45,7 +45,7 @@ Nous utilisons ``mediapipe`` pour extraire les points de repère (landmarks) du 
 
 
 Calcul des caractéristiques (features) visuelles
- ------------------------------------------------
+------------------------------------------------
 
 Les fonctions suivantes permettent de calculer :
 - ``eye_aspect_ratio`` : ouverture des yeux
@@ -80,7 +80,7 @@ Les fonctions suivantes permettent de calculer :
         return (N1 + N2 + N3) / (3 * D)
 
 Extraction des caractéristiques pour les images somnolentes
- -----------------------------------------------------------
+-----------------------------------------------------------
 
 .. code-block:: python
 
@@ -92,8 +92,8 @@ Extraction des caractéristiques pour les images somnolentes
     somnol_list = os.listdir(somnol_path)
     print(f"Nombre d'images somnolentes : {len(somnol_list)}")
 
- Extraction des caractéristiques pour les images non somnolentes
- ---------------------------------------------------------------
+Extraction des caractéristiques pour les images non somnolentes
+---------------------------------------------------------------
 
 Pour chaque image active, nous appliquons :
 - Flip horizontal
