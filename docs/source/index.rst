@@ -28,7 +28,7 @@ Bienvenue à la documentation du projet
 **encadrant**:
 ===========
 
-*PROFESSEUR TAWFIK MASROUR*
+**PROFESSEUR TAWFIK MASROUR**
 ===========================
 
 
