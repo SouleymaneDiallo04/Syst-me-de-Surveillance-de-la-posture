@@ -11,25 +11,25 @@ Bienvenue à la documentation du projet
    :width: 100%
    
 
-Système de Surveillance Intelligent
-----------------------------------------
+*Système de Surveillance Intelligent*
+========================================
 
 ----
 
-*réalisé par*
+**réalisé par**:
 =============
 
-*HINIMDOU MORSIA GUITDAM*
+**HINIMDOU MORSIA GUITDAM**
 ===========================
 
-*SOULEYMANE DIALLO*
+**SOULEYMANE DIALLO**
 =====================
 
-*encadrant*
+**encadrant**:
 ===========
 
-**PROFESSEUR TAWFIK MASROUR**
-
+*PROFESSEUR TAWFIK MASROUR*
+===========================
 
 
 ----
