@@ -16,11 +16,17 @@ Système de Surveillance Intelligent
 
 ----
 
-***Réalisé par***: 
-HINIMDOU MORSIA GUITDAM et SOULEYMANE DIALLO
+RÉALISÉ PAR
+============
 
-***Encadrant**:  
-Professeur Tawfik Masrour
+**HINIMDOU MORSIA GUITDAM**  
+**SOULEYMANE DIALLO**
+
+ENCADRANT
+=========
+
+**PROFESSEUR TAWFIK MASROUR**
+
 
 ----
 
