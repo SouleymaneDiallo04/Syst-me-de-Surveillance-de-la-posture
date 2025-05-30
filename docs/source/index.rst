@@ -1,13 +1,8 @@
 Mon Projet documentation master file
-╔════════════════════════════════════════════════════════════════════╗
-║                                                                    ║
-║          🌟 Bienvenue à la Documentation Officielle 🌟             ║
-║                                                                    ║
-║           📡 Système de Surveillance Intelligent 📡               ║
-║                                                                    ║
-║   🔒 Détection de Chutes • 🔮 Prédiction de Chutes • 😴 Somnolence   ║
-║                                                                    ║
-╚════════════════════════════════════════════════════════════════════╝
+==============================================
+  🌟 Bienvenue à la documentation du projet 🌟
+         Système de Surveillance Intelligent
+==============================================
 
 .. contents::
    :depth: 2
