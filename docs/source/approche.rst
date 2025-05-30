@@ -92,8 +92,9 @@ Extraction des caractéristiques pour les images somnolentes
     somnol_list = os.listdir(somnol_path)
     print(f"Nombre d'images somnolentes : {len(somnol_list)}")
 
+
 Extraction des caractéristiques pour les images non somnolentes
----------------------------------------------------------------
+
 
 Pour chaque image active, nous appliquons :
 - Flip horizontal
