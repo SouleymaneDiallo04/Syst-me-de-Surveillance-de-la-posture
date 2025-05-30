@@ -11,7 +11,8 @@ Pour notre projet, nous avons adapté le traitement des données selon le modèl
 
 Dans cette section, nous détaillons l’approche spécifique pour le modèle de détection de somnolence.
 
-### Chargement des données
+ Chargement des données
+ ----------------------
 
 Nous téléchargeons le dataset directement depuis Kaggle à l’aide de ``kagglehub`` :
 
@@ -23,8 +24,9 @@ Nous téléchargeons le dataset directement depuis Kaggle à l’aide de ``kaggl
     path = kagglehub.dataset_download("rakibuleceruet/drowsiness-prediction-dataset")
 
     print("Path to dataset files:", path)
-
-### Utilisation de Mediapipe pour les landmarks faciaux
+    
+ Utilisation de Mediapipe pour les landmarks faciaux
+ ---------------------------------------------------
 
 Nous utilisons ``mediapipe`` pour extraire les points de repère (landmarks) du visage :  
 
@@ -40,7 +42,9 @@ Nous utilisons ``mediapipe`` pour extraire les points de repère (landmarks) du 
         min_tracking_confidence=0.8
     )
 
-### Calcul des caractéristiques (features) visuelles
+
+ Calcul des caractéristiques (features) visuelles
+ ------------------------------------------------
 
 Les fonctions suivantes permettent de calculer :
 - ``eye_aspect_ratio`` : ouverture des yeux
@@ -50,7 +54,7 @@ Les fonctions suivantes permettent de calculer :
 
     import numpy as np
 
-    # Fonction pour calculer la distance euclidienne entre deux points
+    #Fonction pour calculer la distance euclidienne entre deux points
     def distance(p1, p2):
         return (((p1[:2] - p2[:2])**2).sum())**0.5
 
@@ -74,7 +78,8 @@ Les fonctions suivantes permettent de calculer :
         D = distance(landmarks[mouth[0][0]], landmarks[mouth[0][1]])
         return (N1 + N2 + N3) / (3 * D)
 
-### Extraction des caractéristiques pour les images somnolentes
+ Extraction des caractéristiques pour les images somnolentes
+ -----------------------------------------------------------
 
 .. code-block:: python
 
@@ -86,7 +91,8 @@ Les fonctions suivantes permettent de calculer :
     somnol_list = os.listdir(somnol_path)
     print(f"Nombre d'images somnolentes : {len(somnol_list)}")
 
-### Extraction des caractéristiques pour les images non somnolentes
+ Extraction des caractéristiques pour les images non somnolentes
+ ---------------------------------------------------------------
 
 Pour chaque image active, nous appliquons :
 - Flip horizontal
@@ -137,7 +143,8 @@ Pour chaque image active, nous appliquons :
     with open("./feats/mp_active_feats.pkl", "wb") as f:
         pickle.dump(active_feats, f)
 
-### Préparation des jeux de données
+ Préparation des jeux de données
+ -------------------------------
 
 On crée les labels et on divise en jeux d’entraînement/test :  
 
@@ -157,7 +164,8 @@ On crée les labels et on divise en jeux d’entraînement/test :
         X, y, test_size=0.2, random_state=42
     )
 
-### Fonction pour visualisation et redimensionnement des images
+ Fonction pour visualisation et redimensionnement des images
+ -----------------------------------------------------------
 
 La fonction ``draw`` permet :  
 - De dessiner les landmarks (tessellation, yeux, bouche)
