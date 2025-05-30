@@ -1,4 +1,3 @@
-Mon Projet documentation master file
 ----
 .. image:: ../_static/ENSAMMeknès.png
    :alt: Système de Surveillance Intelligent
