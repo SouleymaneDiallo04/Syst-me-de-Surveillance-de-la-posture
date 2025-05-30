@@ -1,10 +1,16 @@
+----
+
 Bienvenue à la documentation du projet
 ========================================
+
+----
 
 .. image:: ../_static/ENSAMMeknès.png
    :alt: Système de Surveillance Intelligent
    :align: center
    :width: 100%
+   
+----
 
 Système de Surveillance Intelligent
 ----------------------------------------
