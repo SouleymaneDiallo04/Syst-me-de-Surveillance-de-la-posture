@@ -6,10 +6,11 @@ Mon Projet documentation master file
    :width: 400px
 
 ----
-==============================================
-  🌟 Bienvenue à la documentation du projet 🌟
-         Système de Surveillance Intelligent
-==============================================
+Bienvenue à la documentation du projet
+========================================
+Système de Surveillance Intelligent
+----------------------------------------
+
 
 .. contents::
    :depth: 2
