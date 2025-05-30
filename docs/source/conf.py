@@ -28,4 +28,16 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 def setup(app):
     app.add_css_file('custom.css')
+    
+    html_theme_options = {
+    'nosidebar': True,
+    'show_search_results_only': False,
+    'show_related': False,
+    'show_relbars': False,
+    'show_powered_by': False,
+    'sidebar_collapse': False,
+    'fixed_sidebar': False,
+    'searchbar': False,  # <-- Ajoute cette ligne pour désactiver la barre de recherche
+}
+
 
