@@ -19,16 +19,16 @@ Bienvenue à la documentation du projet
 **réalisé par**:
 =============
 
-**HINIMDOU MORSIA GUITDAM**
-===========================
+HINIMDOU MORSIA GUITDAM
+=========================
 
-**SOULEYMANE DIALLO**
-=====================
+SOULEYMANE DIALLO
+=================
 
-**encadrant**:
-===========
+**encadrant*:
+============
 
-**PROFESSEUR TAWFIK MASROUR**
+PROFESSEUR TAWFIK MASROUR
 ===========================
 
 
