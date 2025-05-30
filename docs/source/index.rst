@@ -27,6 +27,14 @@ Professeur Tawfik Masrour
    installations
    documentation
    defis
+   
+   ----
 
 .. note::
    Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet : hinimdoumorsia@gmail.com
+   
+   ----
+   
+   .. include:: nav_arrow.rst
+   
+   ----
