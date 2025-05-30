@@ -25,8 +25,8 @@ HINIMDOU MORSIA GUITDAM
 SOULEYMANE DIALLO
 =================
 
-**encadrant*:
-============
+**encadrant**:
+=============
 
 PROFESSEUR TAWFIK MASROUR
 ===========================
