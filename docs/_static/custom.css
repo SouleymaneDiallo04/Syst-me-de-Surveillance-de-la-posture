@@ -7,11 +7,14 @@ input[type="search"] {
     width: 250px !important;
 }
 
-/* Encadrer toute la zone de recherche */
-div.search {
-    border: 2px solid #007acc;
-    background-color: #e6f2ff;
-    padding: 5px;
-    border-radius: 6px;
-    margin-left: 10px;
+/* Encadrer le texte au-dessus de la barre de recherche */
+div.search label,        /* label au-dessus */
+div.search .search-label /* classe éventuelle pour le texte */ {
+    border: 2px solid #007acc; /* bordure bleue */
+    padding: 5px 10px;          /* un peu d’espace autour */
+    border-radius: 6px;         /* coins arrondis */
+    background-color: #e6f2ff; /* fond bleu clair */
+    display: inline-block;      /* pour que la taille s’adapte au contenu */
+    margin-bottom: 5px;         /* un petit espace sous le texte */
+    font-weight: bold;          /* texte en gras pour ressortir */
 }
