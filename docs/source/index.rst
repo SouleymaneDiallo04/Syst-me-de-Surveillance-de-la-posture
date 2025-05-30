@@ -1,11 +1,10 @@
 .. Mon Projet documentation master file
+Bienvenue à la documentation du projet
+=====================================
 
-##############################################
-#                                            #
-#   Bienvenue à la documentation du projet   #
-#      Système de Surveillance Intelligent    #
-#                                            #
-##############################################
+Système de Surveillance Intelligent
+-----------------------------------
+
 
 .. contents::
    :depth: 2
