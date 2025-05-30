@@ -1,8 +1,10 @@
+Mon Projet documentation master file
 ----
 .. image:: ../_static/ENSAMMeknès.png
    :alt: Système de Surveillance Intelligent
    :align: center
-   :width: 400px
+   :width: 100%
+
 
 ----
 Bienvenue à la documentation du projet
