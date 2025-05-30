@@ -1,5 +1,5 @@
-Installation des Packages
-=========================
+VI.Installation des Packages
+============================
 
 Pour assurer le bon fonctionnement des modèles d’intelligence artificielle développés, plusieurs bibliothèques Python doivent être installées. Elles sont regroupées selon les modules fonctionnels : détection de somnolence, prédiction de chute, et détection de chute.
 

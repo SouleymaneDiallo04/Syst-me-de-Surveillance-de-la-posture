@@ -1,5 +1,5 @@
-Documentation Technique
-=======================
+VII.Documentation Technique
+============================
 
 .. toctree::
    :maxdepth: 2

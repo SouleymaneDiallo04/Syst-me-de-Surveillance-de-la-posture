@@ -1,5 +1,5 @@
-Fonctionnalités Principales
-===========================
+IV.Fonctionnalités Principales
+===============================
 
 .. list-table::
    :widths: 30 70
