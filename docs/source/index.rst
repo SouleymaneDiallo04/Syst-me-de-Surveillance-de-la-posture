@@ -3,7 +3,6 @@ Bienvenue à la documentation du projet
 
 ----
 
-
 .. image:: ../_static/ENSAMMeknès.png
    :alt: Système de Surveillance Intelligent
    :align: center
@@ -12,6 +11,13 @@ Bienvenue à la documentation du projet
 Système de Surveillance Intelligent
 ----------------------------------------
 
+----
+----
+**Réalisé par** :  
+HINIMDOU MORSIA GUITDAM et SOULEYMANE DIALLO
+
+**Encadrant** :  
+Professeur Tawfik Masrour
 
 ----
 
