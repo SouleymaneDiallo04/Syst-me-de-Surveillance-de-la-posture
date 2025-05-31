@@ -48,7 +48,7 @@ Bienvenue à la documentation du projet
    ----
 
 .. note::
-   Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet : hinimdoumorsia@gmail.com
+   Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet : hinimdoumorsia@gmail.com/sd100615@gmail.com
    
    ----
    
