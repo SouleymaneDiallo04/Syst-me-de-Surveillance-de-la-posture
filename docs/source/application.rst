@@ -5,6 +5,8 @@ Description de l’Application
 Bienvenue à l’application de Surveillance Intelligente
 ======================================================
 
+----
+
 Bienvenue dans cette application  de **Surveillance Intelligente** !  
 Cette solution a été conçue pour combiner plusieurs modèles d’intelligence artificielle afin d’assurer la sécurité et la vigilance en temps réel.  
 Avec elle, vous pouvez détecter les chutes, prédire les risques de chute, surveiller la somnolence, ou combiner tout cela en un seul écran.
