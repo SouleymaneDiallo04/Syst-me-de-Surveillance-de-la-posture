@@ -159,9 +159,9 @@ Voici le cœur du code Python avec explications et commentaires intégrés.
             index=3
         )
         alert_threshold = st.slider("Seuil d'alerte", 1, 3, 2)
-        if st.button("▶️ Démarrer la surveillance"):
+        if st.button(" Démarrer la surveillance"):
             st.session_state.run_detection = True
-        if st.button("⏹️ Arrêter"):
+        if st.button(" Arrêter"):
             st.session_state.run_detection = False
 
     video_placeholder = st.empty()
@@ -192,14 +192,14 @@ Voici le cœur du code Python avec explications et commentaires intégrés.
                 img = cv2.resize(frame_rgb, (128, 128)) / 255.0
                 preds = fall_prediction_model.predict(
                     np.expand_dims(np.repeat(img[np.newaxis], 30, axis=0), axis=0), verbose=0)
-                label = "⚠️ Risque de chute!" if preds[0][0] > 0.5 else "✅ Stable"
+                label = " Risque de chute!" if preds[0][0] > 0.5 else "✅ Stable"
                 annotated_frame = draw_french_text(frame_rgb, label, (50, 50), font_scale=1,
                                                   color=(0, 255, 255) if preds[0][0] <= 0.5 else (0, 0, 255))
 
             elif model_choice == "Détection Somnolence":
                 img = cv2.resize(frame_rgb, (145, 145)) / 255.0
                 preds = drowsiness_model.predict(img[np.newaxis], verbose=0)
-                label = "😴 Somnolence détectée!" if preds[0][0] > 0.5 else "😊 Éveillé"
+                label = " Somnolence détectée!" if preds[0][0] > 0.5 else " Éveillé"
                 color = (0, 0, 255) if preds[0][0] > 0.5 else (0, 255, 0)
                 annotated_frame = draw_french_text(frame_rgb, label, (50, 50), font_scale=1, color=color)
 
@@ -344,7 +344,7 @@ Titre principal et message de bienvenue
 .. code-block:: python
 
     inject_custom_css()
-    st.title("👁️ Système de Surveillance Intelligente")
+    st.title(" Système de Surveillance Intelligente")
     st.markdown("Bienvenue à notre application de surveillance intelligente qui combine détection, prédiction de chute et suivi de somnolence en temps réel.")
 
 Affiche le titre de l’application et un message de bienvenue.
@@ -430,9 +430,9 @@ Interface utilisateur dans la sidebar
             index=3
         )
         alert_threshold = st.slider("Seuil d'alerte", 1, 3, 2)
-        if st.button("▶️ Démarrer la surveillance"):
+        if st.button(" Démarrer la surveillance"):
             st.session_state.run_detection = True
-        if st.button("⏹️ Arrêter"):
+        if st.button("Arrêter"):
             st.session_state.run_detection = False
 
 Permet à l’utilisateur de configurer :
