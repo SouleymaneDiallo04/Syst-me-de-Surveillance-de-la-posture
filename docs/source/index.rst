@@ -11,7 +11,7 @@ Bienvenue à la documentation du projet
    :width: 100%
    
 
-*Système de Surveillance Intelligent*
+Système de Surveillance Intelligent
 ========================================
 
 ----
@@ -25,7 +25,7 @@ Bienvenue à la documentation du projet
 **encadrant**:
 =============
 
-*professeur tawfik masrour*
+professeur tawfik masrour
 ===========================
 
 
