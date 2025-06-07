@@ -20,7 +20,7 @@ Système de Surveillance Intelligent
 **réalisé par**:
 ===============
 
-hinimdou morsia guitdam* & *souleymane diallo
+hinimdou morsia guitdam & souleymane diallo
 ==============================================
 
 **encadrant**:
