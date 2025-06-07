@@ -2,10 +2,13 @@
 II.Approche Technique
 =====================
 
-------
+
+----
 
 Prétraitement des Données
 -------------------------
+
+----
 
 Pour notre projet, nous avons adapté le traitement des données selon le modèle :  
 - **Détection de chute**  
@@ -18,6 +21,8 @@ Dans cette section, nous détaillons l’approche spécifique pour le modèle de
 
 Chargement des données
 ----------------------
+
+----
 
 Nous téléchargeons le dataset directement depuis Kaggle à l’aide de ``kagglehub`` :
 
@@ -36,6 +41,8 @@ Nous téléchargeons le dataset directement depuis Kaggle à l’aide de ``kaggl
     
 Utilisation de Mediapipe pour les landmarks faciaux
 ---------------------------------------------------
+
+----
 
 Nous utilisons ``mediapipe`` pour extraire les points de repère (landmarks) du visage :  
 
@@ -56,6 +63,8 @@ Nous utilisons ``mediapipe`` pour extraire les points de repère (landmarks) du 
 
 Calcul des caractéristiques (features) visuelles
 ------------------------------------------------
+
+----
 
 Les fonctions suivantes permettent de calculer :
 - ``eye_aspect_ratio`` : ouverture des yeux
@@ -93,6 +102,8 @@ Les fonctions suivantes permettent de calculer :
 
 Extraction des caractéristiques pour les images somnolentes
 -----------------------------------------------------------
+
+----
 
 .. code-block:: python
 
@@ -161,6 +172,7 @@ Pour chaque image active, nous appliquons :
 
 Préparation des jeux de données
  -------------------------------
+----
 
 On crée les labels et on divise en jeux d’entraînement/test :  
 
@@ -184,6 +196,8 @@ On crée les labels et on divise en jeux d’entraînement/test :
     
 Fonction pour visualisation et redimensionnement des images
  -----------------------------------------------------------
+ 
+ ----
 
 La fonction ``draw`` permet :  
 - De dessiner les landmarks (tessellation, yeux, bouche)
