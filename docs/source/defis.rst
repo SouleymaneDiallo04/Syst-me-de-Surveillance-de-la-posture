@@ -47,12 +47,12 @@ Difficultés rencontrées
 4. **Perte d’un modèle performant sur GitHub**  
    Après avoir entraîné un premier modèle très performant, nous l’avons hébergé sur **GitHub** sans connaître la politique concernant les fichiers lourds. Résultat : le fichier a été supprimé/modifié automatiquement, ce qui a causé la **perte définitive du modèle**.
 
-   ✅ **Leçon apprise** : ne plus stocker de gros fichiers modèles directement sur GitHub sans passer par Git LFS ou un stockage externe.
+    **Leçon apprise** : ne plus stocker de gros fichiers modèles directement sur GitHub sans passer par Git LFS ou un stockage externe.
 
 5. **Incompatibilité de packages avec Flask**  
    Nous avons tenté de construire une interface de démonstration avec **Flask**, mais certains modèles ne se chargeaient pas correctement. Ce problème venait de **conflits entre les versions de packages** (TensorFlow, Keras, OpenCV, etc.) utilisés dans l’environnement Flask.
 
-   🔧 Solution :
+    Solution :
    - Création d’un **environnement Python séparé** avec les versions exactes compatibles.
    - Conversion des modèles pour les adapter à cet environnement.
 
@@ -80,12 +80,12 @@ Challenges ouverts
 
 ----
 
-- 🛠 **Développement d’une API REST** :
+-  **Développement d’une API REST** :
   - Backend en Python hébergeant les modèles (détection de chute, prédiction, somnolence).
   - Intégration avec une application **Spring Boot** côté client.
   - Sécurisation et **déploiement complet** de l’application.
 
-- 🧠 **Création d’un vrai jeu de données pour la prédiction de chute** :
+-  **Création d’un vrai jeu de données pour la prédiction de chute** :
   - Les données disponibles aujourd’hui sont très limitées.
   - Objectif : construire ou annoter un dataset dédié montrant uniquement les **phases pré-chute**.
 
