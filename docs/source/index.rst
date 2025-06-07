@@ -30,23 +30,21 @@ professeur tawfik masrour
 ===========================
 
 
+.. admonition:: Table des Matières
 
-----
+   .. toctree::
+      :maxdepth: 2
+      :caption: Contenu
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contenu
+      introduction
+      approche
+      description
+      fonctionnalites
+      structure
+      installations
+      documentation
+      defis
 
-   introduction
-   approche
-   description
-   fonctionnalites
-   structure
-   installations
-   documentation
-   defis
-
-   ----
 
 .. note::
    Pour toute question technique, consulter le dépôt GitHub ou contacter l'équipe projet : hinimdoumorsia@gmail.com/sd100615@gmail.com
