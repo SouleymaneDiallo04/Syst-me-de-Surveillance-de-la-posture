@@ -1,5 +1,9 @@
+----
+
 I. Introduction
 ===============
+
+----
 
 Objectif du Projet
 ------------------
@@ -18,6 +22,8 @@ Par ailleurs, plusieurs **technologies de pointe** seront mises en œuvre : trai
 
 Ce projet est développé par **Souleymane Diallo** et **Hinimdou Morsia Guitdam**, deux jeunes passionnés par l’**apprentissage automatique** et souhaitant approfondir leur maîtrise de la **vision par ordinateur** à travers une réalisation concrète et utile.
 
+----
+
 Illustration du Projet
 ----------------------
 
@@ -26,3 +32,4 @@ Illustration du Projet
    :align: center
    :width: 100%
 
+----
