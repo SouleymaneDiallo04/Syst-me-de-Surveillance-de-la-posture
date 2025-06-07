@@ -47,7 +47,6 @@ IV. Fonctionnalités Principales
      - Conçue avec **Streamlit** pour la simplicité, rapidité et interactivité.
        - Interface Web responsive.
        - Deux modes disponibles :
-         - **Mode Vidéo** : chargement de fichiers pour traitement batch.
          - **Mode Caméra** : traitement en direct via webcam ou caméra IP.
        - Affichage en temps réel des prédictions sur les vidéos.
        - Option pour démarrer/arrêter l’analyse.
@@ -55,15 +54,5 @@ IV. Fonctionnalités Principales
        - Boutons pour exporter les résultats, logs ou alertes.
        - Prise en charge multilingue (prévu).
        - Interface intuitive pour les utilisateurs non techniques.
-
-----
-   *  🔹 **Sécurité et Stockage**
-----
-
-     - Authentification de l’utilisateur par identifiants.
-       - Accès personnalisé aux vidéos et résultats.
-       - Historique des détections consultable.
-       - Sauvegarde automatique des journaux d’analyse dans une base de données.
-       - Sécurisation des modèles et des routes API prévues lors du déploiement.
 
 ----
