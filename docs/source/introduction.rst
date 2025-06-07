@@ -27,7 +27,7 @@ Ce projet est développé par **Souleymane Diallo** et **Hinimdou Morsia Guitdam
 Illustration du Projet
 ----------------------
 
-.. image:: ../_static/iMAGE2.jpg
+.. image:: ../_static/ImageYolov5Model/val_batch0_pred.jpg
    :alt: Illustration du système ou des auteurs
    :align: center
    :width: 100%
