@@ -7,8 +7,7 @@ IV. Fonctionnalités Principales
    :header-rows: 0
 
 ----
-   * - 🔹 **Détection de Somnolence**
-   
+   * 🔹 **Détection de Somnolence**
 ----
 
      - Utilisation d'un modèle CNN pour l'analyse en temps réel du visage. Extraction des indicateurs clés tels que :
@@ -19,7 +18,7 @@ IV. Fonctionnalités Principales
        - Adapté à la surveillance des conducteurs ou du personnel médical.
 
 ----
-   * - 🔹 **Prédiction de Chute**
+   *  🔹 **Prédiction de Chute**
 ----
 
      - Analyse temporelle de vidéos via des séquences d’images de taille fixe (30 frames).
@@ -31,7 +30,7 @@ IV. Fonctionnalités Principales
        - Alerte préventive possible avant que la chute n’ait lieu.
 
 ----
-   * - 🔹 **Détection de Chute**
+   *  🔹 **Détection de Chute**
 ----
 
      - Détection en temps réel à l’aide de **YOLOv5**, un modèle de détection rapide.
@@ -42,7 +41,7 @@ IV. Fonctionnalités Principales
        - Optimisé pour le traitement en local (CPU/GPU).
 
 ----
-   * - 🔹 **Interface Utilisateur**
+   * 🔹 **Interface Utilisateur**
 ----
 
      - Conçue avec **Streamlit** pour la simplicité, rapidité et interactivité.
@@ -58,7 +57,7 @@ IV. Fonctionnalités Principales
        - Interface intuitive pour les utilisateurs non techniques.
 
 ----
-   * - 🔹 **Sécurité et Stockage**
+   *  🔹 **Sécurité et Stockage**
 ----
 
      - Authentification de l’utilisateur par identifiants.
