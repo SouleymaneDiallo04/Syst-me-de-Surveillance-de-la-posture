@@ -1,5 +1,8 @@
+----
 II.Approche Technique
 =====================
+
+------
 
 Prétraitement des Données
 -------------------------
@@ -10,6 +13,8 @@ Pour notre projet, nous avons adapté le traitement des données selon le modèl
 - **Détection de somnolence**  
 
 Dans cette section, nous détaillons l’approche spécifique pour le modèle de détection de somnolence.
+
+----
 
 Chargement des données
 ----------------------
@@ -24,6 +29,9 @@ Nous téléchargeons le dataset directement depuis Kaggle à l’aide de ``kaggl
     path = kagglehub.dataset_download("rakibuleceruet/drowsiness-prediction-dataset")
 
     print("Path to dataset files:", path)
+    
+    
+----
     
     
 Utilisation de Mediapipe pour les landmarks faciaux
@@ -42,6 +50,8 @@ Nous utilisons ``mediapipe`` pour extraire les points de repère (landmarks) du 
         min_detection_confidence=0.3,
         min_tracking_confidence=0.8
     )
+
+----
 
 
 Calcul des caractéristiques (features) visuelles
@@ -78,6 +88,8 @@ Les fonctions suivantes permettent de calculer :
         N3 = distance(landmarks[mouth[3][0]], landmarks[mouth[3][1]])
         D = distance(landmarks[mouth[0][0]], landmarks[mouth[0][1]])
         return (N1 + N2 + N3) / (3 * D)
+        
+----
 
 Extraction des caractéristiques pour les images somnolentes
 -----------------------------------------------------------
@@ -144,6 +156,8 @@ Pour chaque image active, nous appliquons :
     os.makedirs("./feats", exist_ok=True)
     with open("./feats/mp_active_feats.pkl", "wb") as f:
         pickle.dump(active_feats, f)
+        
+----
 
 Préparation des jeux de données
  -------------------------------
@@ -166,6 +180,7 @@ On crée les labels et on divise en jeux d’entraînement/test :
         X, y, test_size=0.2, random_state=42
     )
     
+----
     
 Fonction pour visualisation et redimensionnement des images
  -----------------------------------------------------------
@@ -229,4 +244,122 @@ La fonction ``draw`` permet :
         # Redimensionnement pour le modèle
         resized_array = cv2.resize(image_drawing_tool, (IMG_SIZE, IMG_SIZE))
         return resized_array
+        
+----
+
+Traitement d’image pour le modèle de prédiction
+===============================================
+
+----
+
+Ce module de préparation des données vise à transformer les vidéos en **séquences d’images** normalisées, exploitables par un modèle de prédiction de chutes basé sur des réseaux de neurones (CNN + LSTM).
+
+Objectif
+--------
+
+Prétraiter les vidéos afin de :
+
+- Extraire un nombre fixe de **30 images par vidéo**.
+- Redimensionner chaque image à **128x128 pixels**.
+- Étiqueter les vidéos selon leur nature : **chute (0)** ou **mouvement normal (1)**.
+- Créer un ensemble d’apprentissage et de test au format attendu par un modèle Keras.
+
+Paramètres
+----------
+
+- ``SEQUENCE_LENGTH = 30`` : nombre d’images extraites par vidéo.
+- ``IMG_SIZE = (128, 128)`` : taille à laquelle chaque image est redimensionnée.
+- ``TEST_RATIO = 0.05`` : proportion de données utilisées pour le test.
+- ``VIDEO_PATH_CHUTES`` : dossier contenant les vidéos de chutes.
+- ``VIDEO_PATH_NORMAUX`` : dossier contenant les vidéos normales.
+
+----
+
+Étapes du traitement
+--------------------
+
+1. **Extraction des images** :
+   - Chaque vidéo est lue image par image.
+   - Les images sont converties en **RGB** puis redimensionnées à ``128x128``.
+   - Seules les vidéos comportant **au moins 30 images** sont retenues.
+   - Le tout est stocké sous forme de tableau NumPy.
+
+2. **Étiquetage** :
+   - Les vidéos de chutes reçoivent le label ``0``.
+   - Les vidéos normales reçoivent le label ``1``.
+
+3. **Préparation des données** :
+   - Les données (``X``) sont converties en tableau NumPy de forme ``(N, 30, 128, 128, 3)``.
+   - Les étiquettes (``y``) sont transformées en **one-hot encoding** via ``to_categorical``.
+
+4. **Découpage en train/test** :
+   - Utilisation de ``train_test_split`` avec stratification selon les classes.
+   - Ratio test fixé à 5 %.
+
+Exemple d’exécution
+-------------------
+
+À la fin de l’exécution du script :
+
+.. code-block:: bash
+
+   Données préparées : (95, 30, 128, 128, 3) (train), (5, 30, 128, 128, 3) (test)
+
+Cela signifie que 100 vidéos ont été traitées, et 95 sont utilisées pour l’entraînement.
+
+----
+
+Code source
+-----------
+
+.. code-block:: python
+
+   import cv2
+   import os
+   import numpy as np
+   from sklearn.model_selection import train_test_split
+   from keras.utils import to_categorical
+
+   SEQUENCE_LENGTH = 30
+   IMG_SIZE = (128, 128)
+   TEST_RATIO = 0.05
+
+   VIDEO_PATH_CHUTES = r"../data/dataAlgorithme1/VideoChute"
+   VIDEO_PATH_NORMAUX = r"../data/dataAlgorithme1/videoNormal"
+
+   def extract_frames(video_path, num_frames=SEQUENCE_LENGTH):
+       cap = cv2.VideoCapture(video_path)
+       frames = []
+       while len(frames) < num_frames and cap.isOpened():
+           ret, frame = cap.read()
+           if not ret:
+               break
+           frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+           frame = cv2.resize(frame, IMG_SIZE)
+           frames.append(frame)
+       cap.release()
+       return np.array(frames[:num_frames])
+
+   X, y = [], []
+
+   for video_file in os.listdir(VIDEO_PATH_CHUTES):
+       video_path = os.path.join(VIDEO_PATH_CHUTES, video_file)
+       sequence = extract_frames(video_path)
+       if len(sequence) == SEQUENCE_LENGTH:
+           X.append(sequence)
+           y.append(0)
+
+   for video_file in os.listdir(VIDEO_PATH_NORMAUX):
+       video_path = os.path.join(VIDEO_PATH_NORMAUX, video_file)
+       sequence = extract_frames(video_path)
+       if len(sequence) == SEQUENCE_LENGTH:
+           X.append(sequence)
+           y.append(1)
+
+   X = np.array(X)
+   y = to_categorical(np.array(y))
+   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=TEST_RATIO, stratify=y)
+   print(f"Données préparées : {X_train.shape} (train), {X_test.shape} (test)")
+
+----
 
