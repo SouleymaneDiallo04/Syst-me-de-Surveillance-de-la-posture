@@ -254,8 +254,11 @@ Traitement d’image pour le modèle de prédiction
 
 Ce module de préparation des données vise à transformer les vidéos en **séquences d’images** normalisées, exploitables par un modèle de prédiction de chutes basé sur des réseaux de neurones (CNN + LSTM).
 
+----
 Objectif
 --------
+
+----
 
 Prétraiter les vidéos afin de :
 
@@ -264,8 +267,10 @@ Prétraiter les vidéos afin de :
 - Étiqueter les vidéos selon leur nature : **chute (0)** ou **mouvement normal (1)**.
 - Créer un ensemble d’apprentissage et de test au format attendu par un modèle Keras.
 
+----
 Paramètres
 ----------
+----
 
 - ``SEQUENCE_LENGTH = 30`` : nombre d’images extraites par vidéo.
 - ``IMG_SIZE = (128, 128)`` : taille à laquelle chaque image est redimensionnée.
@@ -277,6 +282,8 @@ Paramètres
 
 Étapes du traitement
 --------------------
+
+----
 
 1. **Extraction des images** :
    - Chaque vidéo est lue image par image.
@@ -311,6 +318,7 @@ Cela signifie que 100 vidéos ont été traitées, et 95 sont utilisées pour l�
 
 Code source
 -----------
+----
 
 .. code-block:: python
 
