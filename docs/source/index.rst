@@ -10,6 +10,7 @@ Bienvenue à la documentation du projet
    :align: center
    :width: 100%
    
+----
 
 Système de Surveillance Intelligent
 ========================================
@@ -17,9 +18,9 @@ Système de Surveillance Intelligent
 ----
 
 **réalisé par**:
-=============
+===============
 
-*hinimdou morsia guitdam* & *souleymane diallo*
+hinimdou morsia guitdam* & *souleymane diallo
 ==============================================
 
 **encadrant**:
