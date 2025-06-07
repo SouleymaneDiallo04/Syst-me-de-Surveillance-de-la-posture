@@ -10,6 +10,7 @@ IV. Fonctionnalités Principales
    * - 🔹 **Détection de Somnolence**
    
 ----
+
      - Utilisation d'un modèle CNN pour l'analyse en temps réel du visage. Extraction des indicateurs clés tels que :
        - EAR (Eye Aspect Ratio) pour détecter la fermeture des yeux.
        - MAR (Mouth Aspect Ratio) pour détecter les bâillements.
@@ -32,6 +33,7 @@ IV. Fonctionnalités Principales
 ----
    * - 🔹 **Détection de Chute**
 ----
+
      - Détection en temps réel à l’aide de **YOLOv5**, un modèle de détection rapide.
        - Identification immédiate de personnes allongées ou dans des postures anormales.
        - Système d’alerte intégré :
@@ -58,6 +60,7 @@ IV. Fonctionnalités Principales
 ----
    * - 🔹 **Sécurité et Stockage**
 ----
+
      - Authentification de l’utilisateur par identifiants.
        - Accès personnalisé aux vidéos et résultats.
        - Historique des détections consultable.
