@@ -24,5 +24,5 @@ Illustration du Projet
 .. image:: ../_static/iMAGE2.jpg
    :alt: Illustration du système ou des auteurs
    :align: center
-   :width: 60%
+   :width: 100%
 
