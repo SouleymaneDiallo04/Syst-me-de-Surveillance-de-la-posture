@@ -1,0 +1,25 @@
+## 📂 Données d'entraînement et de test
+
+👋 Bonjour et bienvenue cher visiteur !
+
+Vous pouvez trouver les données correspondantes à **l'entraînement et au test** de nos modèles :
+
+- 🔍 **Modèle YOLOv5 (détection de chute)**
+- 🔮 **Modèle de prédiction de chute**
+
+👉 Les données sont disponibles ici :  
+[https://mega.nz/folder/5hpAUSDb#XR88CbFDDlc7fNP6Kp0lLw](https://mega.nz/folder/5hpAUSDb#XR88CbFDDlc7fNP6Kp0lLw)
+
+---
+
+## 💤 Données pour la détection de somnolence
+
+Les données pour le modèle de **détection de somnolence** peuvent être téléchargées très facilement à l’aide du script suivant :
+
+```python
+import kagglehub
+
+# Télécharger la dernière version du dataset
+path = kagglehub.dataset_download("rakibuleceruet/drowsiness-prediction-dataset")
+
+print("Path to dataset files:", path)
