@@ -17,16 +17,16 @@ Système de Surveillance Intelligent
 
 ----
 
-**réalisé par**:
+**Réalisé par**:
 ===============
 
-hinimdou morsia guitdam & souleymane diallo
+Hinimdou Morsia Guitdam & Souleymane Diallo
 ==============================================
 
-**encadrant**:
+**Encadrant**:
 =============
 
-professeur tawfik masrour
+Mr Tawfik Masrour
 ===========================
 
 
