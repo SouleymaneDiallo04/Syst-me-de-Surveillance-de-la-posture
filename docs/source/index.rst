@@ -3,14 +3,10 @@
 =============================================================
 Documentation du projet : Système de Surveillance Intelligent
 =============================================================
-----
 
-.. image:: ../_static/ENSAMMeknès.png
-   :alt: Système de Surveillance Intelligent
-   :align: center
-   :width: 100%
+Bienvenue dans la documentation du projet IA de Système de Surveillance Intelligent
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-----
 
 **Réalisé par**:
 ===============
