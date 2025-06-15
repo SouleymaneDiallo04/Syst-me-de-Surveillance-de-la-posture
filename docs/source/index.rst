@@ -20,15 +20,26 @@ Système de Surveillance Intelligent
 **Réalisé par**:
 ===============
 
-Hinimdou Morsia Guitdam & Souleymane Diallo
-==============================================
+- **DIALLO Souleymane**
+
+- **HINIMDOU Morsia Guitdam**
 
 **Encadrant**:
 =============
 
-Mr Tawfik Masrour
-===========================
+- **Mr. Tawfik Masrour**
 
+==================
+Filière : GIATD-SI
+==================
+
+============================
+Établissement : ENSAM-MEKNES
+============================
+
+===================
+Période : Juin 2025
+===================
 
 .. admonition:: Table des Matières
 
