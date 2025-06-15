@@ -5,8 +5,8 @@ I. Introduction
 
 ----
 
-Objectif du Projet
-------------------
+**Objectif**
+^^^^^^^^^^^^
 
 Ce projet vise à concevoir un **système de surveillance intelligent** reposant sur la **vision par ordinateur**, avec pour principal objectif de garantir la sécurité des personnes vulnérables, notamment les personnes âgées, les patients ou toute autre population à risque.
 
@@ -24,8 +24,8 @@ Ce projet est développé par **Souleymane Diallo** et **Hinimdou Morsia Guitdam
 
 ----
 
-Illustration du Projet
-----------------------
+**Illustration du Projet**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../_static/ImageYolov5Model/val_batch0_pred.jpg
    :alt: Illustration du système ou des auteurs
